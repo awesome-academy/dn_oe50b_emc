@@ -1,4 +1,8 @@
 class User < ApplicationRecord
+  has_many :rates, dependent: :destroy
+  has_many :orders, dependent: :destroy
+  has_many :suggests, dependent: :destroy
+
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i.freeze
   PHONE_NUMBER_REGEX = /(84|0[3|5|7|8|9])+([0-9]{8})\b/i.freeze
   ID_CARD_REGEX = /([0-9]{9})||([0-9]{8})\b/i.freeze

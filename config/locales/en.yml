@@ -47,3 +47,4 @@ en:
       pass_confir: "Confirmation"
   flash:
     create_success: "Account successfully created"
+

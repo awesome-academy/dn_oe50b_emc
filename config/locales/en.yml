@@ -20,6 +20,7 @@ en:
     author: "Author"
   title:
     sign_up: "Sign up"
+    login: "Login"
   language:
     vi: "Vietnamese"
     en: "English"
@@ -45,5 +46,13 @@ en:
       address: "Address"
       pass: "Password"
       pass_confir: "Confirmation"
+      new_user: "New User? "
+      profile: "Profile"
+      settings: "Settings"
+      logout: "Logout"
+      order: "Cart"
+      remember: "Remember me on this computer"
   flash:
     create_success: "Account successfully created"
+    email_password_combination: "Invalid email/password combination"
+

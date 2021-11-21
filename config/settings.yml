@@ -3,3 +3,5 @@ validate:
     digist_255: 255
     digist_2: 2
     digist_6: 6
+
+check: "1"

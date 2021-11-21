@@ -13,6 +13,8 @@
     <%= javascript_pack_tag "application", "data-turbolinks-track": "reload" %>
   </head>
   <body id="top">
+   <%= render "shared/leftMenuAdmin" %>
+   <%= yield %>
     <%= render "layouts/header_client" %>
     <div class="container">
       <% flash.each do |message_type, message| %>
@@ -21,4 +23,5 @@
       <%= yield %>
     </div>
   </body>
+
 </html>

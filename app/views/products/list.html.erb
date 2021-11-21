@@ -1,3 +1,4 @@
+
 <div id="content">
   <nav class="navbar navbar-default">
     <div class="container-fluid">
@@ -16,15 +17,18 @@
     <div class="alert alert-<%= message_type %>"><%= message %></div>
     <% end %>
     <div class="row">
-      <%= link_to t("crud.create"), new_path,class:"nav-link" %>
+      <%= link_to t("crud.create"), new_product_path,class:"nav-link" %>
       <h2><%= t"left_menu.products" %></h2>
-      <table class="table">
-        <thead>
-          <tr>
+      <table class="table table-striped">
+        <thead >
+          <tr class="info">
             <th><%= t"product.name" %></th>
+            <th><%= t"product.category" %></th>
+            <th><%= t"product.status" %></th>
             <th><%= t"product.quantity" %></th>
             <th><%= t"product.price" %></th>
             <th><%= t"product.author" %></th>
+            <th><%= t"crud.detail" %></th>
             <th><%= t"crud.edit" %></th>
             <th><%= t"crud.delete" %></th>
           </tr>
@@ -33,17 +37,33 @@
           <% @products.each do |product| %>
           <tr>
            <td><%= product.name %></td>
+           <td><%= product.category.title%></td>
+           <td><%= product.status %></td>
            <td><%= product.quantity %></td>
            <td><%= product.price %></td>
            <td><%= product.author %></td>
-           <td><button class="btn btn-primary"><i class="zmdi zmdi-edit"></i>
-           </button></td>
-           <td><button class="btn btn-danger"><i class="zmdi zmdi-delete"></i>
-           </button></td>
-         </tr>
-         <% end %>
-       </tbody>
-     </table>
-   </div>
- </div>
+           <td>
+            <%= link_to product_path(product.id),class: "btn btn-success" do%>
+            <i class="zmdi zmdi-eye">
+            </i>
+            <% end %>
+          </td>
+          <td>
+            <%= link_to edit_product_path(product.id),class: "btn btn-info" do%>
+            <i class="zmdi zmdi-edit">
+            </i>
+            <% end %>
+          </td>
+          <td>
+            <%= link_to product_path(product.id), method: :delete, data: {confirm: t("product.confirm_delete")}, class: "btn btn-danger" do%>
+            <i class="zmdi zmdi-delete">
+            </i>
+            <% end %>
+          </td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
 </div>

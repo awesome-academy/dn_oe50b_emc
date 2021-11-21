@@ -36,3 +36,37 @@ vi:
   flash:
     create_success: "Tạo tài khoản thành công"
     email_password_combination: "Email/mật khẩu không hợp lệ"
+  left_menu:
+    dashboard: "Trang chủ"
+    products: "Quản lí sản phẩm"
+    users: "Quản lí người dùng"
+    categories: "Quản lí danh mục"
+    requests: "Quản lí yêu cầu"
+    statistic: "Quản lí thống kê"
+    orders: "Quản lí đơn hàng"
+  crud:
+    create: "Thêm mới"
+    delete: "Xóa"
+    edit: "Chỉnh sửa"
+    update: "Cập nhật"
+    back: "Trở về"
+    detail: "Chi tiết"
+  product:
+    name: "Tên sản phấm"
+    quantity: "Số lượng"
+    price: "Giá tiền"
+    status: "Tình trạng"
+    author: "Tác giả"
+    publisher: "Nhà xuất bản"
+    category: "Danh mục"
+    description: "Mô tả"
+    create_succ: "Thêm mới sản phẩm thành công!"
+    update_succ: "Cập nhật sản phẩm thành công!"
+    delete_succ: "Xóa sản phẩm thành công!"
+    update_fail: "Cập nhật sản phẩm thất bại!"
+    confirm_delete: "Bạn có chắc chắn xóa sản phẩm này?"
+    detail: "Chi tiết sản phẩm"
+  activerecord:
+    errors:
+      messages:
+        min_8: "tối thiểu phải bằng 8"

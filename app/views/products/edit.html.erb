@@ -1,0 +1,65 @@
+<div id="content">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="#"><i class="zmdi zmdi-notifications text-danger"></i>
+          </a>
+        </li>
+        <li><%= link_to_unless_current "English", locale:"en" %></li>
+        <li><%= link_to_unless_current "Vietnamese", locale:"vi" %></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container-fluid">
+    <%= render "shared/error_messages" %>
+    <%= form_for @product, url: {action: :update} do |f| %>
+    <div class="card">
+      <div class="card-body">
+        <div class="mb-5">
+          <%= f.label :name, t("product.name") %>
+          <%= f.text_field :name, { class: "form-control", placeholder: "" } %>
+        </div>
+
+        <div class="mb-3">
+          <%= f.label :price, t("product.price") %>
+          <%= f.text_field :price, { class: "form-control", placeholder: "" } %>
+        </div>
+
+        <div class="mb-3">
+          <%= f.label :quantity, t("product.quantity") %>
+          <%= f.text_field :quantity, { class: "form-control", placeholder: "" } %>
+        </div>
+
+        <div class="mb-3">
+          <%= f.label :status, t("product.status") %>
+          <%= f.select(:status, options_for_select([["Hot","Hot"],["New","New"]]),{},{:class=>"form-control"}) %>
+        </div>
+
+        <div class="mb-3">
+          <%= f.label :author, t("product.author") %>
+          <%= f.text_field :author, { class: "form-control", placeholder: "" } %>
+        </div>
+
+        <div class="mb-3">
+          <%= f.label :description, t("product.description") %>
+          <%= f.text_area  :description, { class: "form-control", placeholder: "" } %>
+        </div>
+
+        <div class="mb-3">
+          <%= f.label :publisher, t("product.publisher") %>
+          <%= f.text_field :publisher, { class: "form-control", placeholder: "" } %>
+        </div>
+
+        <div class="mb-3">
+          <%= f.label :categories_id, t("product.category") %>
+          <%= collection_select(:product, :categories_id, Category.all, :id, :title,{},{:class=>"form-control"})%>
+        </div>
+        <div class="mb-3">
+          <%= f.submit t("crud.update"), class: "btn btn-primary submit" %>
+          <%= link_to t("crud.back"), list_product_path, class: "btn btn-success backBtn" %>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>

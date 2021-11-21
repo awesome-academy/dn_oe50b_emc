@@ -12,6 +12,8 @@ en:
     delete: "Delete"
     edit: "Edit"
     update: "Update"
+    back: "Back"
+    detail: "Detail"
   product:
     name: "Name product"
     quantity: "Quantity"
@@ -55,4 +57,17 @@ en:
   flash:
     create_success: "Account successfully created"
     email_password_combination: "Invalid email/password combination"
+    publisher: "Publisher"
+    category: "Category"
+    description: "Description"
+    create_succ: "Add new product successful!"
+    update_succ: "Update product successful!"
+    delete_succ: "Delete product successful!"
+    update_fail: "Update product fail!"
+    confirm_delete: "Are you sure to delete this product?"
+    detail: "Detail product"
+  activerecord:
+    errors:
+      messages:
+        min_8: "min length must be 8"
 

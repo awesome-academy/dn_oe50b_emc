@@ -3,5 +3,14 @@ validate:
     digist_255: 255
     digist_2: 2
     digist_6: 6
-
 check: "1"
+atrr:
+  lenght_8: 8
+  lenght_50: 50
+  lenght_255: 255
+  lenght_140: 140
+  price_50: 50
+  quantity_10: 10
+regex:
+  email: !ruby/regexp /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+

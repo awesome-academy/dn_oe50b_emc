@@ -37,8 +37,21 @@ vi:
     update:
       td: "Cập nhật hồ sơ của bạn"
       save: "Lưu thay đổi"
+      activate: "Kích hoạt"
   flash:
     create_success: "Tạo tài khoản thành công"
     email_password_combination: "Email/mật khẩu không hợp lệ"
     profile_updated: "Đã cập nhật hồ sơ"
     please_login: "Vui lòng đăng nhập."
+
+    please_check_email: "Vui lòng kiểm tra email của bạn để kích hoạt tài khoản của bạn."
+    account_activated: "Tài khoản đã được kích hoạt!"
+    invalid_activation_link: "Liên kết kích hoạt không hợp lệ"
+    check_email_acti: "Tài khoản chưa được kích hoạt.
+          Hãy kiểm tra email của bạn để biết liên kết kích hoạt."
+    account_activation: "Kích hoạt tài khoản"
+  mailer:
+    book_store: "Book store"
+    hi: "Chào"
+    content_mail: "Chào mừng đến với Book store!
+                   Nhấp vào liên kết bên dưới để kích hoạt tài khoản của bạn:"

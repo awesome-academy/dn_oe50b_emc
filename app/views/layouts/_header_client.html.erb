@@ -2,17 +2,17 @@
   <div id="topbar" class="hoc clear">
     <div class="fl_left">
       <ul class="nospace">
-        <li><a href="index.html"><i class="fas fa-home fa-lg"></i></a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Login</a></li>
-        <li><a href="#">Sign up</a></li>
+        <li><%= link_to "", home_path, class: "fas fa-home fa-lg"%></li>
+        <li><%= link_to t("language.en"), root_path(locale: :en) %></li>
+        <li><%= link_to t("language.vi"), root_path(locale: :vi) %></li>
+        <li><%= link_to t("header.login"), "#" %></li>
+        <li><%= link_to t("header.sign_up"), "#" %></li>
       </ul>
     </div>
     <div class="fl_right">
       <ul class="nospace">
-        <li><i class="fas fa-phone rgtspace-5"></i> +00 (123) 456 7890</li>
-        <li><i class="fas fa-envelope rgtspace-5"></i> bookstore@gmail.com</li>
+        <li><i class="fas fa-phone rgtspace-5"></i><%= t "header.phone_contact" %> </li>
+        <li><i class="fas fa-envelope rgtspace-5"></i> <%= t "header.email_contact" %></li>
       </ul>
     </div>
   </div>
@@ -20,15 +20,24 @@
 <div class="wrapper row1">
   <header id="header" class="hoc clear">
     <div id="logo" class="one_half first">
-      <h1 class="logoname"><a href="index.html"><span>Book</span>store</a></h1>
+      <h1 class="logoname"><a href="index.html">
+        <span><%= t "header.book" %></span>
+        <%= t "header.store" %></a>
+      </h1>
     </div>
     <div class="one_half">
       <ul class="nospace clear">
         <li class="one_half first">
-          <div class="block clear"><i class="fas fa-phone"></i> <span><strong class="block">Call Us:</strong> +00 (123) 456 7890</span> </div>
+          <div class="block clear"><i class="fas fa-phone"></i> <span><strong class="block">
+            <%= t "header.call_us" %></strong>
+            <%= t "header.phone_contact" %></span>
+          </div>
         </li>
         <li class="one_half">
-          <div class="block clear"><i class="far fa-clock"></i> <span><strong class="block"> Mon. - Sat.:</strong> 08.00am - 18.00pm</span> </div>
+          <div class="block clear"><i class="far fa-clock"></i> <span><strong class="block">
+            <%= t "header.time_work" %></strong>
+            <%= t "header.time_h" %></span>
+          </div>
         </li>
       </ul>
     </div>

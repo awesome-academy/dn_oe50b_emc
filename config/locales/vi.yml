@@ -1,0 +1,15 @@
+vi:
+  language:
+    vi: "Tiếng Việt"
+    en: "Tiếng Anh"
+  header:
+    login: "Đăng nhập"
+    sign_up: "Đăng kí"
+    phone_contact: "+84 366 837 259"
+    email_contact: "bookstore@gmail.com"
+    call_us: "Gọi cho chúng tôi:"
+    time_work: "Thứ 2 - Thứ 7:"
+    time_h: "07.00am - 21.00pm"
+    book: "Book"
+    store: "store"
+    home: "Trang chủ"

@@ -9,7 +9,7 @@ class User < ApplicationRecord
   ID_CARD_REGEX = /([0-9]{9})||([0-9]{8})\b/i.freeze
   before_save :downcase_email
 
-  validates :name, :email, :password, :password_confirmation, presence: true
+  validates :name, :email, presence: true
   validates :name,
             length: {minimum: Settings.validate.length.digist_2}
 
@@ -27,8 +27,9 @@ class User < ApplicationRecord
 
   has_secure_password
 
-  validates :password,
-            length: {minimum: Settings.validate.length.digist_2}
+  validates :password, presence: true,
+            length: {minimum: Settings.validate.length.digist_2},
+            allow_nil: true
 
   class << self
     def digest string
@@ -47,7 +48,7 @@ class User < ApplicationRecord
 
   def remember
     self.remember_token = User.new_token
-    update_attribute(:remember_digest, User.digest(remember_token))
+    update_attribute :remember_digest, User.digest(remember_token)
   end
 
   def authenticated? remember_token

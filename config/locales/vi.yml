@@ -109,6 +109,10 @@ vi:
     order_cancel_fail: "Hủy đơn hàng thất bại"
     invalid_status: "Tình trạng không hợp lệ"
     out_stock: "Hết hàng"
+    confirm: "Bạn có chắc chắn không?"
+    update_order_succ: "Cập nhật tình trạng đơn hàng thành công!"
+    update_order_fail: "Cập nhật tình trạng đơn hàng thất bại!"
+    update_order_already: "Tình trạng đã cập nhật rồi!"
   mailer:
     book_store: "Book store"
     hi: "Chào"
@@ -226,3 +230,6 @@ vi:
     total_order: "Tổng tiền hóa đơn"
     detail_order: "Chi tiết hóa đơn"
     order: "Hóa đơn"
+  orders_mailer:
+    content_change: "Tình trạng đơn hàng của bạn đã thay đổi,
+    vui lòng xem nội dung để biết thêm"

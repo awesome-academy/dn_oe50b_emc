@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
   namespace :admin do
-    resources :orders, except: %i(create destroy)
+    resources :orders, except: %i(create destroy) do
+      member do
+        put :approve
+        put :reject
+      end
+    end
     resources :products
   end
   get "password_resets/new"

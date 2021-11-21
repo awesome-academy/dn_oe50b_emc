@@ -111,6 +111,10 @@ en:
     order_cancel_fail: "Canceled failed order"
     invalid_status: "Invalid status"
     out_stock: "Out stock"
+    confirm: "Are you sure to do this ?"
+    update_order_succ: "Update staus order successful!"
+    update_order_fail: "Update status order fail!"
+    update_order_already: "Order's status update alreay!"
   mailer:
     book_store: "Book store"
     hi: "Hi"
@@ -197,3 +201,6 @@ en:
     ordinal_number: "Ordinal number"
     date_order: "Date order"
     total_order: "Total money order"
+  orders_mailer:
+    content_change: "Your order's status has been change,
+    please check content to know more"

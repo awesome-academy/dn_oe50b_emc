@@ -13,9 +13,8 @@ atrr:
   lenght_normal: 140
   price_min: 50
   quantity_min: 10
-  paging_min: 2
+  paging_min: 5
 regex:
   email: !ruby/regexp /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
-
 per_10: 2
 

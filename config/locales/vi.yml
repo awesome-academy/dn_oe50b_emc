@@ -137,6 +137,23 @@ vi:
     requests: "Quản lí yêu cầu"
     statistic: "Quản lí thống kê"
     orders: "Quản lí đơn hàng"
+  crud:
+    create: "Thêm mới"
+    delete: "Xóa"
+    edit: "Chỉnh sửa"
+    update: "Cập nhật"
+    back: "Trở về"
+    detail: "Chi tiết"
+  product:
+    name: "Tên sản phấm"
+    quantity: "Số lượng"
+    price: "Giá tiền"
+    status: "Tình trạng"
+    author: "Tác giả"
+    publisher: "Nhà xuất bản"
+    category: "Danh mục"
+    description: "Mô tả"
+    img: "Ảnh"
   activerecord:
     errors:
       messages:
@@ -144,5 +161,8 @@ vi:
   currency:
     product_price: "%{price} đ"
   mess:
-    errors: "errors"
-    contain: "Contain"
+    errors: "lỗi"
+    contain: "Tồn tại"
+  image:
+    invalid: "Phải phù hợp với format!"
+    min: "Phải nhỏ hơn 5MB!"

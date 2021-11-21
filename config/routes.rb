@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   namespace :admin do
     resources :orders, except: %i(create destroy)
+    resources :products
   end
   get "password_resets/new"
   get "password_resets/edit"
@@ -31,5 +32,4 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :products
 end

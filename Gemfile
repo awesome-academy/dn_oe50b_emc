@@ -21,6 +21,7 @@ gem "sass-rails", ">= 6"
 gem "sqlite3", "~> 1.4"
 gem "turbolinks", "~> 5"
 gem "webpacker", "~> 5.0"
+gem "paranoia", "~> 2.2"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]

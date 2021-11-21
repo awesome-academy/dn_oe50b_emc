@@ -16,7 +16,7 @@
     <% if logged_in? %>
       <%= render "shared/#{current_user.admin? ? "left_menu_admin" : "header_client"}" %>
     <% else %>
-      <%= render "shared/header_client" %>
+      <%= render "shared/left_menu_admin" %>
     <% end %>
     <div class="container">
       <% flash.each do |message_type, message| %>

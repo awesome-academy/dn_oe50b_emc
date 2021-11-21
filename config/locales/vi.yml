@@ -171,3 +171,11 @@ vi:
   image:
     invalid: "Phải phù hợp với format!"
     min: "Phải nhỏ hơn 5MB!"
+    errors: "lỗi"
+    contain: "Tồn tại"
+  orders:
+    address: "Địa chỉ"
+    receiver: "Người nhận"
+    phone_number: "Số điện thoại"
+    status: "Tình trạng"
+    total_price: "Tổng tiền"

@@ -18,3 +18,18 @@ en:
     price: "Price"
     status: "Status"
     author: "Author"
+  language:
+    vi: "Vietnamese"
+    en: "English"
+  header:
+    login: "Login"
+    sign_up: "Sign Up"
+    phone_contact: "+84 366 837 259"
+    email_contact: "bookstore@gmail.com"
+    call_us: "Call Us:"
+    time_work: "Mon. - Sat.:"
+    time_h: "07.00am - 21.00pm"
+    book: "Book"
+    store: "store"
+    home: "Home"
+

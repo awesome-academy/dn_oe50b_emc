@@ -1,4 +1,6 @@
 vi:
+  title:
+    sign_up: "Đăng kí"
   language:
     vi: "Tiếng Việt"
     en: "Tiếng Anh"
@@ -13,3 +15,16 @@ vi:
     book: "Book"
     store: "store"
     home: "Trang chủ"
+  button:
+    create: "Tạo tài khoản của tôi"
+  user:
+    new:
+      name: "Tên"
+      email: "Gmail"
+      id_card: "Số CMND"
+      phone_number: "Số điện thoại"
+      address: "Địa chỉ"
+      pass: "Mật khẩu"
+      pass_confir: "Nhập lại mật khẩu"
+  flash:
+    create_success: "Tạo tài khoản thành công"

@@ -1,0 +1,25 @@
+<%= form_for @user do |f| %>
+      <%= render 'shared/error_messages' %>
+
+      <%= f.label t("user.new.name") %>
+      <%= f.text_field :name, class: "form-control" %>
+
+      <%= f.label t("user.new.email") %>
+      <%= f.email_field :email, class: "form-control" %>
+
+      <%= f.label t("user.new.id_card") %>
+      <%= f.text_field :id_card, class: "form-control" %>
+
+      <%= f.label t("user.new.phone_number") %>
+      <%= f.text_field :phone_number, class: "form-control" %>
+
+      <%= f.label t("user.new.address") %>
+      <%= f.text_field :address, class: "form-control" %>
+
+      <%= f.label t("user.new.pass") %>
+      <%= f.password_field :password, class: "form-control" %>
+
+      <%= f.label t("user.new.pass_confir") %>
+      <%= f.password_field :password_confirmation, class: "form-control" %>
+      <%= f.submit yield(:button_text), class: "btn btn-primary button_custom" %>
+<% end %>

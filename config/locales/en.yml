@@ -18,6 +18,8 @@ en:
     price: "Price"
     status: "Status"
     author: "Author"
+  title:
+    sign_up: "Sign up"
   language:
     vi: "Vietnamese"
     en: "English"
@@ -32,4 +34,16 @@ en:
     book: "Book"
     store: "store"
     home: "Home"
-
+  button:
+    create: "Create my account"
+  user:
+    new:
+      name: "Name"
+      email: "Gmail"
+      id_card: "ID Card"
+      phone_number: "Phone number"
+      address: "Address"
+      pass: "Password"
+      pass_confir: "Confirmation"
+  flash:
+    create_success: "Account successfully created"

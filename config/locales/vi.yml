@@ -1,6 +1,7 @@
 vi:
   title:
     sign_up: "Đăng kí"
+    login: "Đăng nhập"
   language:
     vi: "Tiếng Việt"
     en: "Tiếng Anh"
@@ -26,5 +27,12 @@ vi:
       address: "Địa chỉ"
       pass: "Mật khẩu"
       pass_confir: "Nhập lại mật khẩu"
+      new_user: "Người dùng mới? "
+      profile: "Hồ sơ"
+      settings: "Cài đặt"
+      logout: "Đăng xuất"
+      order: "Giỏ hàng"
+      remember: "Hãy nhớ tôi trên máy tính này"
   flash:
     create_success: "Tạo tài khoản thành công"
+    email_password_combination: "Email/mật khẩu không hợp lệ"

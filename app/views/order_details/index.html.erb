@@ -1,0 +1,63 @@
+<div>
+  <ol class="breadcrumb">
+    <li><%= link_to t("header.home"), home_client_path %></li>
+    <li class="active"><%= t "order.cart" %></li>
+  </ol>
+</div>
+<div>
+  <table class="ty-cart-content ty-table">
+    <thead>
+      <tr class="vs-cart-header">
+        <th class="ty-cart-content__title ty-left">
+          <%= t "order.product" %>
+        </th>
+        <th class="ty-cart-content__title ty-left"></th>
+        <th class="ty-cart-content__title ty-right">
+          <%= t "order.quantity" %>
+        </th>
+        <th class="ty-cart-content__title quantity-cell">
+          <%= t "order.unit_price" %>
+        </th>
+        <th class="ty-cart-content__title ty-right">
+          <%= t "order.total_price" %>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @orderdetails.each do |item| %>
+      <tr class="vs-cart-product">
+        <td class="ty-cart-content__product-elem ty-cart-content__image-block">
+          <%= image_tag "doraemon_tap19.jpg" %>
+        </td>
+        <td class="ty-cart-content__product-elem ty-cart-content__description">
+          <%= link_to item.product.name, static_page_path(item.product.id), class: "product-title-tb" %>
+          <div>
+            <%= "#{t("home.author")}:  #{item.product.author}" %>
+            <br>
+            <%= "#{t("home.publisher")}:  #{item.product.publisher}" %>
+          </div>
+        </td>
+        <td class="ty-cart-content__product-elem ty-cart-content__qty ">
+          <input type="number" id="quantity" name="quantity" min="1" value=<%= item.quantity %> class="width-input">
+        </td>
+        <td class="ty-cart-content__product-elem ty-cart-content__price">
+          <%= t(number_to_currency(item.product.price)) %>
+        </td>
+        <td class="ty-cart-content__product-elem ty-cart-content__price">
+          <%= t(number_to_currency(item.quantity*item.product.price)) %>
+        </td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+<div class="buttons-container ty-cart-content__bottom-buttons clearfix">
+  <div class="ty-cart-content__left-buttons">
+    <%= link_to t("order.continue_shopping"), home_client_path, class: "btn-product btn-warning" %>
+  </div>
+  <div class="ty-cart-content__right-buttons">
+    <%= link_to t("order.pay"), "#", class: "btn-product btn-danger" %>
+  </div>
+</div>
+
+

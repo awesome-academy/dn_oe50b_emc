@@ -15,9 +15,9 @@ ActiveRecord::Schema.define(version: 2021_11_23_064032) do
   create_table "categories", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "title"
     t.text "content"
-    t.bigint "categories_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "categories_id"
+    t.datetime "created_at", precision: 6
+    t.datetime "updated_at", precision: 6
     t.index ["categories_id"], name: "index_categories_on_categories_id"
   end
 
@@ -26,8 +26,8 @@ ActiveRecord::Schema.define(version: 2021_11_23_064032) do
     t.integer "quantity"
     t.bigint "orders_id", null: false
     t.bigint "products_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", precision: 6
+    t.datetime "updated_at", precision: 6
     t.index ["orders_id"], name: "index_order_details_on_orders_id"
     t.index ["products_id"], name: "index_order_details_on_products_id"
   end
@@ -39,8 +39,8 @@ ActiveRecord::Schema.define(version: 2021_11_23_064032) do
     t.string "name_customer"
     t.string "phone_number"
     t.bigint "user_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", precision: 6
+    t.datetime "updated_at", precision: 6
     t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
@@ -53,8 +53,8 @@ ActiveRecord::Schema.define(version: 2021_11_23_064032) do
     t.string "publisher"
     t.text "description"
     t.bigint "categories_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", precision: 6
+    t.datetime "updated_at", precision: 6
     t.index ["categories_id"], name: "index_products_on_categories_id"
   end
 

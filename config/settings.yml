@@ -9,3 +9,5 @@ check: "1"
 size:
   size_medium: 120
 
+per_10: 2
+

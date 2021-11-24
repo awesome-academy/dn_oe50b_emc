@@ -137,7 +137,11 @@ vi:
     total: "Tổng cộng: "
   cart:
     add_success: "Sản phẩm đã được thêm vào giỏ hàng"
-    update_quantity: "Sản phẩm đã được cập nhật số lượng trong giỏ hàng"
+    update_quantity: "Sản phẩm đã được cập nhật số lượng"
+    error_update: "Cập nhật thất bại"
+    delete_success: "Xóa thành công"
+    error_delete: "Xóa thất bại"
+    confirm : "Bạn chắc chứ ?"
   number:
     currency:
       format:

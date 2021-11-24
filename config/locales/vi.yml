@@ -3,6 +3,8 @@ vi:
     sign_up: "Đăng kí"
     login: "Đăng nhập"
     edit_user: "Chỉnh sửa người dùng"
+    forgot_pass: "Quên mật khẩu"
+    reset_pass: "Đặt lại mật khẩu"
   language:
     vi: "Tiếng Việt"
     en: "Tiếng Anh"
@@ -19,6 +21,8 @@ vi:
     home: "Trang chủ"
   button:
     create: "Tạo tài khoản của tôi"
+    submit: "Nộp"
+    update_pass: "Cập nhật mật khẩu"
   user:
     new:
       name: "Tên"
@@ -38,20 +42,31 @@ vi:
       td: "Cập nhật hồ sơ của bạn"
       save: "Lưu thay đổi"
       activate: "Kích hoạt"
+      forgot_pass: "(quên mật khẩu)"
   flash:
     create_success: "Tạo tài khoản thành công"
     email_password_combination: "Email/mật khẩu không hợp lệ"
     profile_updated: "Đã cập nhật hồ sơ"
     please_login: "Vui lòng đăng nhập."
-
     please_check_email: "Vui lòng kiểm tra email của bạn để kích hoạt tài khoản của bạn."
     account_activated: "Tài khoản đã được kích hoạt!"
     invalid_activation_link: "Liên kết kích hoạt không hợp lệ"
     check_email_acti: "Tài khoản chưa được kích hoạt.
           Hãy kiểm tra email của bạn để biết liên kết kích hoạt."
     account_activation: "Kích hoạt tài khoản"
+    email_sent: "Email được gửi kèm theo hướng dẫn đặt lại mật khẩu"
+    email_not_found: "Không tìm thấy địa chỉ email"
+    pass_reset: "Đặt lại mật khẩu"
+    pass_reset_has_expired: "Đặt lại mật khẩu đã hết hạn."
+    pass_has_been_reset: "Mật khẩu đã được đặt lại."
+    cant_be_empty: "không thể để trống"
   mailer:
     book_store: "Book store"
     hi: "Chào"
     content_mail: "Chào mừng đến với Book store!
                    Nhấp vào liên kết bên dưới để kích hoạt tài khoản của bạn:"
+    pass_reset: "Đặt lại mật khẩu"
+    content_reset: "Để đặt lại mật khẩu của bạn, hãy nhấp vào liên kết bên dưới:"
+    note_reset: "Liên kết này sẽ hết hạn sau hai giờ.
+          Nếu bạn không yêu cầu đặt lại mật khẩu của mình,
+          vui lòng bỏ qua email này và mật khẩu của bạn sẽ vẫn như cũ."

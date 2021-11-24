@@ -13,5 +13,11 @@ class Order < ApplicationRecord
             length: {minimum: Settings.validate.length.digist_6},
             format: {with: Settings.regex.PHONE_NUMBER_REGEX}
 
-  enum status: {pending: 0, approve: 1, reject: 2}, _prefix: true
+  enum status: {pending: 0, approve: 1, reject: 2, cancel: 3}, _prefix: true
+
+  def rollback_quantity
+    order_details.each do |item|
+      item.product.update!(quantity: item.product.quantity + item.quantity)
+    end
+  end
 end

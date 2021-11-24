@@ -104,6 +104,11 @@ vi:
     product_not_found: "Sản phẩm không có"
     not_found: "Không tìm thấy!"
     reject_access: "Bạn không có quyền truy cập!"
+    order_not_found: "Không tìm thấy đơn hàng"
+    order_cancel: "Đã hủy đơn hàng "
+    order_cancel_fail: "Hủy đơn hàng thất bại"
+    invalid_status: "Tình trạng không hợp lệ"
+    out_stock: "Hết hàng"
   mailer:
     book_store: "Book store"
     hi: "Chào"
@@ -150,6 +155,7 @@ vi:
     date_crate: "Ngày đặt"
     total_money: "Tổng tiền"
     operation: "Thao tác"
+    cancel: "Hủy đơn hàng"
   cart:
     add_success: "Sản phẩm đã được thêm vào giỏ hàng"
     update_quantity: "Sản phẩm đã được cập nhật số lượng"

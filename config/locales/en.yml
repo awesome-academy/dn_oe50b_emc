@@ -33,6 +33,8 @@ en:
     forgot_pass: "Forgot password"
     reset_pass: "Reset password"
     cart: "Cart"
+    my_order: "My order"
+    order_detail: "Order details"
   language:
     vi: "Vietnamese"
     en: "English"
@@ -72,6 +74,7 @@ en:
       logout: "Logout"
       order: "Cart"
       remember: "Remember me on this computer"
+      order_history: "Order history"
     update:
       td: "Update your profile"
       save: "Save changes"
@@ -102,6 +105,7 @@ en:
     product_empty: "Your list product is an empty"
     product_not_found: "Product not found"
     not_found: "Not found!"
+    order_not_found: "Order not found"
   mailer:
     book_store: "Book store"
     hi: "Hi"
@@ -142,6 +146,12 @@ en:
     order_detail: "Order details"
     order_success: "Order Success"
     not_valid: "Order not valid"
+    id: "ID"
+    status: "Status"
+    name_receiver: "Recipient's name"
+    date_crate: "Date"
+    total_money: "Total money"
+    operation: "Operation"
   cart:
     add_success: "The product has been added to cart"
     update_quantity: "The product has been updated to the quantity in the cart"

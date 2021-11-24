@@ -1,0 +1,35 @@
+<% provide :title, @products.name %>
+<div>
+  <ol class="breadcrumb">
+    <li><%= link_to t("header.home"), home_client_path %></li>
+    <li class="active"><%= @products.name %></li>
+  </ol>
+</div>
+<div class="thumbnail product-box col-md-4">
+  <%= image_tag("doraemon_tap19.jpg", alt: "rss feed") %>
+</div>
+<div class="caption col-md-8">
+  <h1 class="detail-tt"><%= @products.name %></h1>
+  <p>
+    <%= t "home.price" %>
+    <strong class="detail-price"><%= t(number_to_currency(@products.price)) %></strong>
+  </p>
+  <h1 class="detail-desciptipon"><%= t "home.short_description" %></h1>
+  <%= @products.description %>
+  <p>
+    <%= "#{t("home.author")}:  #{@products.author}" %>
+    <br>
+    <%= "#{t("home.publisher")}:  #{@products.publisher}" %>
+    <br>
+    <p class="detail-slg">
+      <%= "#{t("home.stocking")}:  #{t("home.sl_sp", slg: @products.quantity)}" %>
+    </p>
+  </p>
+  <p>
+    <%= t "home.solg" %>
+    <input type="number" id="quantity" name="quantity" min="1" value="1" class="width-input">
+  </p>
+  <p>
+    <%= link_to t("home.add_to_cart"), "#", class: "btn-product btn-success" %>
+  </p>
+</div>

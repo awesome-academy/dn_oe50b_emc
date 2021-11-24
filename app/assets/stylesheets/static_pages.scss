@@ -61,7 +61,7 @@ File: Layout CSS
 
 /* Content Area
 --------------------------------------------------------------------------------------------------------------- */
-.container{padding:80px 0;}
+.container{padding:30px 0;}
 
 /* Content */
 .container .content{}
@@ -551,4 +551,43 @@ a:link.product-title {
   font-size: 15px;
   font-weight: bold;
   color: $red;
+}
+.detail-tt {
+  font-style: normal;
+  font-variant-ligatures: normal;
+  font-variant-caps: normal;
+  font-variant-numeric: normal;
+  font-variant-east-asian: normal;
+  font-weight: bold;
+  font-stretch: normal;
+  font-size: 18px;
+  line-height: normal;
+  font-family: Arial, Helvetica, sans-serif, sans-serif;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: $green;
+}
+.detail-desciptipon {
+  font-style: normal;
+  font-variant-ligatures: normal;
+  font-variant-caps: normal;
+  font-variant-numeric: normal;
+  font-variant-east-asian: normal;
+  font-weight: bold;
+  font-stretch: normal;
+  font-size: 16px;
+  line-height: normal;
+  font-family: Arial, Helvetica, sans-serif, sans-serif;
+}
+.detail-price {
+  font-size: 18px;
+  font-weight: bold;
+  color: red;
+}
+.width-input {
+  width: 46px;
+}
+.detail-slg {
+  font-weight: bold;
+  color: $blue;
 }

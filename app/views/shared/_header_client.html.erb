@@ -2,7 +2,7 @@
   <div id="topbar" class="hoc clear">
     <div class="fl_left">
       <ul class="nospace">
-        <li><%= link_to "", home_path, class: "fas fa-home fa-lg"%></li>
+        <li><%= link_to "", home_client_path, class: "fas fa-home fa-lg" %></li>
         <li><%= link_to t("language.en"), root_path(locale: :en) %></li>
         <li><%= link_to t("language.vi"), root_path(locale: :vi) %></li>
         <% if logged_in? %>

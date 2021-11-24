@@ -5,3 +5,6 @@ validate:
     digist_6: 6
 
 check: "1"
+
+size:
+  size_medium: 120

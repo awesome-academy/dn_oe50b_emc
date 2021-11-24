@@ -21,6 +21,7 @@ en:
   title:
     sign_up: "Sign up"
     login: "Login"
+    edit_user: "Edit user"
   language:
     vi: "Vietnamese"
     en: "English"
@@ -52,7 +53,11 @@ en:
       logout: "Logout"
       order: "Cart"
       remember: "Remember me on this computer"
+    update:
+      td: "Update your profile"
+      save: "Save changes"
   flash:
     create_success: "Account successfully created"
     email_password_combination: "Invalid email/password combination"
-
+    profile_updated: "Profile updated"
+    please_login: "Please log in."

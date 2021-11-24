@@ -2,6 +2,7 @@ vi:
   title:
     sign_up: "Đăng kí"
     login: "Đăng nhập"
+    edit_user: "Chỉnh sửa người dùng"
   language:
     vi: "Tiếng Việt"
     en: "Tiếng Anh"
@@ -33,6 +34,11 @@ vi:
       logout: "Đăng xuất"
       order: "Giỏ hàng"
       remember: "Hãy nhớ tôi trên máy tính này"
+    update:
+      td: "Cập nhật hồ sơ của bạn"
+      save: "Lưu thay đổi"
   flash:
     create_success: "Tạo tài khoản thành công"
     email_password_combination: "Email/mật khẩu không hợp lệ"
+    profile_updated: "Đã cập nhật hồ sơ"
+    please_login: "Vui lòng đăng nhập."

@@ -56,8 +56,20 @@ en:
     update:
       td: "Update your profile"
       save: "Save changes"
+      activate: "Activate"
   flash:
     create_success: "Account successfully created"
     email_password_combination: "Invalid email/password combination"
     profile_updated: "Profile updated"
     please_login: "Please log in."
+    please_check_email: "Please check your email to activate your account."
+    account_activated: "Account activated!"
+    invalid_activation_link: "Invalid activation link"
+    check_email_acti: "Account not activated.
+          Check your email for the activation link."
+    account_activation: "Account activation"
+  mailer:
+    book_store: "Book store"
+    hi: "Hi"
+    content_mail: "Welcome to the Book store!
+                  Click on the link below to activate your account:"

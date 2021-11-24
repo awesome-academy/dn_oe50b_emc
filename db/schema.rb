@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_22_150540) do
+ActiveRecord::Schema.define(version: 2021_11_22_173021) do
 
   create_table "categories", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "title"
@@ -90,6 +90,10 @@ ActiveRecord::Schema.define(version: 2021_11_22_150540) do
     t.string "phone_number"
     t.string "address"
     t.string "remember_digest"
+    t.string "activation_digest"
+    t.boolean "activated", default: false
+    t.datetime "activated_at"
+    t.boolean "admin"
   end
 
   add_foreign_key "categories", "categories", column: "categories_id"

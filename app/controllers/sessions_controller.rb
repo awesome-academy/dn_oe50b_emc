@@ -2,14 +2,17 @@ class SessionsController < ApplicationController
   def new; end
 
   def create
-    user = User.find_by(email: params[:session][:email].downcase)
-    if user&.authenticate(params[:session][:password])
+    user = User.find_by email: params[:session][:email].downcase
+    return login_fail unless
+        user.try(:authenticate, params[:session][:password])
+
+    if user.activated
       log_in user
       check_remember user
-      redirect_to root_url
+      redirect_back_or user
     else
-      flash.now[:danger] = t "flash.email_password_combination"
-      render :new
+      flash[:warning] = t "flash.check_email_acti"
+      redirect_to root_url
     end
   end
 

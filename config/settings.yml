@@ -16,5 +16,8 @@ atrr:
   paging_min: 5
 regex:
   email: !ruby/regexp /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  PHONE_NUMBER_REGEX: !ruby/regexp  /(84|0[3|5|7|8|9])+([0-9]{8})\b/i
 per_10: 3
+
+
 

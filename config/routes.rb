@@ -14,6 +14,7 @@ Rails.application.routes.draw do
     get "/login", to: "sessions#new"
     post "/login", to: "sessions#create"
     delete "/logout", to: "sessions#destroy"
+    get "orders/new"
     resources :carts, only: [:index] do
       collection do
         post "add_to_cart/:id", to: "carts#add_to_cart", as: "add_to"
@@ -25,6 +26,7 @@ Rails.application.routes.draw do
     resources :static_pages, only: [:index, :show]
     resources :account_activations, only: :edit
     resources :password_resets, except: %i(index show destroy)
+    resources :orders, only: [:new, :create]
   end
 
   resources :products

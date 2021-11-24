@@ -136,6 +136,10 @@ vi:
     continue_shopping: "Tiếp tục mua sắm"
     pay: "Thanh toán"
     total: "Tổng cộng: "
+    proceed_order: "Tiến hành đặt hàng"
+    order_detail: "Chi tiết đặt hàng"
+    order_success: "Đặt hàng thành công"
+    not_valid: "Đặt hàng không hợp lệ"
   cart:
     add_success: "Sản phẩm đã được thêm vào giỏ hàng"
     update_quantity: "Sản phẩm đã được cập nhật số lượng"
@@ -177,6 +181,7 @@ vi:
     category: "Danh mục"
     description: "Mô tả"
     img: "Ảnh"
+    not_valid: "Sản phẩm không hợp lệ"
   activerecord:
     errors:
       messages:

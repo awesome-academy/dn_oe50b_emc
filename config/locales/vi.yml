@@ -79,6 +79,7 @@ vi:
     pass_reset_has_expired: "Đặt lại mật khẩu đã hết hạn."
     pass_has_been_reset: "Mật khẩu đã được đặt lại."
     cant_be_empty: "không thể để trống"
+    product_not_found: "Sản phẩm không có"
   mailer:
     book_store: "Book store"
     hi: "Chào"
@@ -102,6 +103,17 @@ vi:
     category: "Thể loại"
     author: "Tác giả"
     publisher: "Nhà xuất bản"
+    stocking: "Còn hàng"
+    sl_sp: "%{slg} sản phẩm"
+    solg: "Số lượng: "
+  order:
+    product: "Sản phẩm"
+    quantity: "Số lượng"
+    unit_price: "Đơn giá"
+    total_price: "Tổng giá"
+    cart: "Giỏ hàng"
+    continue_shopping: "Tiếp tục mua sắm"
+    pay: "Thanh toán"
   number:
     currency:
       format:

@@ -79,6 +79,7 @@ en:
     pass_reset_has_expired: "Password reset has expired."
     pass_has_been_reset: "Password has been reset."
     cant_be_empty: "can't be empty"
+    product_not_found: "Product not found"
   mailer:
     book_store: "Book store"
     hi: "Hi"
@@ -102,6 +103,17 @@ en:
     category: "Category"
     author: "Author"
     publisher: "Publisher"
+    stocking: "Stocking"
+    sl_sp: "%{slg} product"
+    solg: "Quantity: "
+  order:
+    product: "Product"
+    quantity: "Quantity"
+    unit_price: "Unit price"
+    total_price: "Total price"
+    cart: "Cart"
+    continue_shopping: "Continue shopping"
+    pay: "Pay"
   number:
     currency:
       format:

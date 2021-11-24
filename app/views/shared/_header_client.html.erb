@@ -18,7 +18,7 @@
               <li><%= link_to t("user.new.logout"), logout_path, method: :delete %></li>
             </ul>
           </li>
-          <li><%= link_to t("user.new.order"), "#" %></li>
+          <li><%= link_to t("user.new.order"), order_details_path %></li>
         <% else %>
           <li><%= link_to t("header.login"), login_path %></li>
           <li><%= link_to t("header.sign_up"), signup_path %></li>

@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
     if user.activated
       log_in user
       check_remember user
-      redirect_back_or user
+      check_admin user
     else
       flash[:warning] = t "flash.check_email_acti"
       redirect_to root_url
@@ -24,5 +24,13 @@ class SessionsController < ApplicationController
   def check_remember user
     par = params[:session]
     par[:remember_me] == Settings.check ? remember(user) : forget(user)
+  end
+
+  def check_admin user
+    if user.admin?
+      redirect_back_or home_path
+    else
+      redirect_back_or root_url
+    end
   end
 end

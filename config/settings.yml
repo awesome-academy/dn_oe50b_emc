@@ -3,9 +3,17 @@ validate:
     digist_255: 255
     digist_2: 2
     digist_6: 6
-
 check: "1"
-
 size:
   size_medium: 120
-
+atrr:
+  lenght_min: 8
+  lenght_medium: 50
+  lenght_max: 255
+  lenght_normal: 140
+  price_min: 50
+  quantity_min: 10
+  paging_min: 2
+regex:
+  email: !ruby/regexp /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+per_10: 2

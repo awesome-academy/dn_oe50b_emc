@@ -12,12 +12,19 @@ en:
     delete: "Delete"
     edit: "Edit"
     update: "Update"
+    back: "Back"
+    detail: "Detail"
   product:
     name: "Name product"
     quantity: "Quantity"
     price: "Price"
     status: "Status"
     author: "Author"
+    detail: "Detail product"
+    img: "Image"
+    publisher: "Publisher"
+    category: "Category"
+    description: "Description"
   title:
     sign_up: "Sign up"
     login: "Login"
@@ -27,6 +34,12 @@ en:
   language:
     vi: "Vietnamese"
     en: "English"
+  views:
+    pagination:
+      first: "«"
+      last: "»"
+      previous: "‹"
+      next: "›"
   header:
     login: "Login"
     sign_up: "Sign Up"
@@ -79,6 +92,12 @@ en:
     pass_reset_has_expired: "Password reset has expired."
     pass_has_been_reset: "Password has been reset."
     cant_be_empty: "can't be empty"
+    create_succ: "Add new product successful!"
+    update_succ: "Update product successful!"
+    delete_succ: "Delete product successful!"
+    update_fail: "Update product fail!"
+    confirm_delete: "Are you sure to delete this product?"
+    product_empty: "Your list product is an empty"
   mailer:
     book_store: "Book store"
     hi: "Hi"
@@ -110,3 +129,12 @@ en:
         delimiter: ","
         separator: "."
         precision:
+  activerecord:
+    errors:
+      messages:
+        min_8: "min length must be 8"
+  currency:
+    product_price: "$%{price}"
+  mess:
+    errors: "errors"
+    contain: "Contain"

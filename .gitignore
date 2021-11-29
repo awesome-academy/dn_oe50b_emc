@@ -80,6 +80,7 @@ config/database.yml
 config/settings.local.yml
 config/settings/*.local.yml
 config/environments/*.local.yml
+config/database.yml
 
 /public/packs
 /public/packs-test
@@ -87,5 +88,5 @@ config/environments/*.local.yml
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
-
 spec/
+

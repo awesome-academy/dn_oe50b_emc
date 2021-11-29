@@ -24,6 +24,7 @@ en:
     edit_user: "Edit user"
     forgot_pass: "Forgot password"
     reset_pass: "Reset password"
+    cart: "Cart"
   language:
     vi: "Vietnamese"
     en: "English"

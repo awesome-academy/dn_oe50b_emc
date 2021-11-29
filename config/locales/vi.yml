@@ -24,6 +24,7 @@ vi:
     edit_user: "Chỉnh sửa người dùng"
     forgot_pass: "Quên mật khẩu"
     reset_pass: "Đặt lại mật khẩu"
+    cart: "Giỏ hàng"
   language:
     vi: "Tiếng Việt"
     en: "Tiếng Anh"

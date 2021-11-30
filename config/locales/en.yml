@@ -143,3 +143,6 @@ en:
   mess:
     errors: "errors"
     contain: "Contain"
+  image:
+    invalid: "Must be a valid image format!"
+    min: "Should be less than 5MB!"

@@ -97,6 +97,7 @@ vi:
     update_fail: "Cập nhật sản phẩm thất bại!"
     confirm_delete: "Bạn có chắc chắn xóa sản phẩm này?"
     product_empty: "Danh sách sản phẩm hiện đang trống"
+    product_not_found: "Sản phẩm không có"
   mailer:
     book_store: "Book store"
     hi: "Chào"
@@ -120,6 +121,10 @@ vi:
     category: "Thể loại"
     author: "Tác giả"
     publisher: "Nhà xuất bản"
+    stocking: "Còn hàng"
+    sl_sp: "%{slg} sản phẩm"
+    solg: "Số lượng: "
+    short_description: "Mô tả ngắn: "
   number:
     currency:
       format:

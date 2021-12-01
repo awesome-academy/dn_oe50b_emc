@@ -18,4 +18,8 @@ class Product < ApplicationRecord
                     size: {less_than: 5.megabytes, message: I18n.t("image.min")}
   scope :ordered_by_price, ->{order(price: :asc)}
   scope :sort_by_created, ->{order(created_at: :desc)}
+
+  def check_enought_quantity? quantity_params
+    quantity_params.positive? && quantity >= quantity_params
+  end
 end

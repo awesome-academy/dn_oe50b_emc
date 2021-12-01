@@ -1,7 +1,7 @@
 <% @products.each do |products| %>
   <div class="col-md-4 text-center col-sm-6 col-xs-6">
     <div class="thumbnail product-box">
-      <%= image_tag("doraemon_tap19.jpg", alt: "rss feed") %>
+      <%= image_tag products.image if products.image.attached? %>
       <div class="caption">
         <%= link_to products.name, static_page_path(products.id), class: "product-title" %>
         <p>
@@ -9,7 +9,7 @@
           <strong class="price-st"><%= t(number_to_currency(products.price)) %></strong>
         </p>
         <p>
-          <%= link_to t("home.add_to_cart"), "#", class: "btn-product btn-success" %>
+          <%= link_to t("home.add_to_cart"), add_to_carts_path(products, quantity: 1), method: :post, class: "btn-product btn-success" %>
           <%= link_to t("home.see_details"), static_page_path(products.id), class: "btn-product btn-primary" %>
         </p>
       </div>

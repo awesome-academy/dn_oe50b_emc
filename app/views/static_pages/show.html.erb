@@ -6,7 +6,7 @@
   </ol>
 </div>
 <div class="thumbnail product-box col-md-4">
-  <%= image_tag("doraemon_tap19.jpg", alt: "rss feed") %>
+  <%= image_tag @products.image if @products.image.attached? %>
 </div>
 <div class="caption col-md-8">
   <h1 class="detail-tt"><%= @products.name %></h1>
@@ -26,10 +26,7 @@
     </p>
   </p>
   <p>
-    <%= t "home.solg" %>
-    <input type="number" id="quantity" name="quantity" min="1" value="1" class="width-input">
-  </p>
-  <p>
-    <%= link_to t("home.add_to_cart"), "#", class: "btn-product btn-success" %>
+    <%= link_to t("home.add_to_cart"), add_to_carts_path(@products, quantity: 1), method: :post,
+    class: "btn-product btn-success" %>
   </p>
 </div>

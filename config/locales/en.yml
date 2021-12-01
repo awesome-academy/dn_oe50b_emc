@@ -31,6 +31,7 @@ en:
     edit_user: "Edit user"
     forgot_pass: "Forgot password"
     reset_pass: "Reset password"
+    cart: "Cart"
   language:
     vi: "Vietnamese"
     en: "English"
@@ -126,6 +127,18 @@ en:
     sl_sp: "%{slg} product"
     solg: "Quantity: "
     short_description: "Short description: "
+  order:
+    product: "Product"
+    quantity: "Quantity"
+    unit_price: "Unit price"
+    total_price: "Total price"
+    cart: "Cart"
+    continue_shopping: "Continue shopping"
+    pay: "Pay"
+    total: "Total: "
+  cart:
+    add_success: "The product has been added to cart"
+    update_quantity: "The product has been updated to the quantity in the cart"
   number:
     currency:
       format:

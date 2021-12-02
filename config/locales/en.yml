@@ -25,6 +25,7 @@ en:
     publisher: "Publisher"
     category: "Category"
     description: "Description"
+    not_valid: "Product not valid"
   title:
     sign_up: "Sign up"
     login: "Login"
@@ -137,6 +138,10 @@ en:
     continue_shopping: "Continue shopping"
     pay: "Pay"
     total: "Total: "
+    proceed_order: "Proceed to order"
+    order_detail: "Order details"
+    order_success: "Order Success"
+    not_valid: "Order not valid"
   cart:
     add_success: "The product has been added to cart"
     update_quantity: "The product has been updated to the quantity in the cart"

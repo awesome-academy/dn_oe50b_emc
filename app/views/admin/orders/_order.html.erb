@@ -5,7 +5,7 @@
   <td><%= order.phone_number %></td>
   <td><%= number_to_currency(order.total_money, locale: :vi) %></td>
   <td>
-    <%= link_to "#", class: "btn btn-success" do %>
+    <%= link_to admin_order_path(order.id), class: "btn btn-success" do %>
      <i class="zmdi zmdi-eye">
      </i>
     <% end %>

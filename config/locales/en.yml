@@ -159,3 +159,9 @@ en:
   image:
     invalid: "Must be a valid image format!"
     min: "Should be less than 5MB!"
+  orders:
+    address: "Address"
+    receiver: "Receiver"
+    phone_number: "Phone number"
+    status: "Status"
+    total_price: "Total price"

@@ -139,6 +139,10 @@ en:
   cart:
     add_success: "The product has been added to cart"
     update_quantity: "The product has been updated to the quantity in the cart"
+    error_update: "Update failed"
+    delete_success: "Delete successfully"
+    error_delete: "Delete failed"
+    confirm : "Are you sure ?"
   number:
     currency:
       format:

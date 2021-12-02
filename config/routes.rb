@@ -17,6 +17,8 @@ Rails.application.routes.draw do
     resources :carts, only: [:index] do
       collection do
         post "add_to_cart/:id", to: "carts#add_to_cart", as: "add_to"
+        put "update/:id", to: "carts#update", as: "update_to"
+        delete "delete/:id", to: "carts#delete", as: "delete_from"
       end
     end
     resources :users

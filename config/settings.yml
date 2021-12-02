@@ -16,5 +16,5 @@ atrr:
   paging_min: 5
 regex:
   email: !ruby/regexp /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
-per_10: 2
+per_10: 3
 

@@ -1,4 +1,5 @@
 class Product < ApplicationRecord
+  acts_as_paranoid
   has_many :rates, dependent: :destroy
   has_many :order_details, dependent: :destroy
   enum statuses: {Hot: 0, New: 1, Trend: 2}

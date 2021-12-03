@@ -1,7 +1,7 @@
 class OrderDetail < ApplicationRecord
+  acts_as_paranoid
   belongs_to :order
   belongs_to :product
-
   delegate :name, :price, :image, to: :product, prefix: true
   validate :product_present
   validate :order_present

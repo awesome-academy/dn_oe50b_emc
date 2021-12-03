@@ -21,6 +21,11 @@ class OrdersController < ApplicationController
     render :new
   end
 
+  def index
+    @orders = current_user.orders.sort_by_created.page(params[:page])
+                          .per(Settings.per_5)
+  end
+
   private
 
   def order_params

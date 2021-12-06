@@ -51,6 +51,10 @@
           <%= link_to order_order_details_path(order), class: "btn btn-sm btn-primary" do %>
             <i class="fa fa-eye"></i>
           <% end %>
+          <% if order.status == "pending" %>
+            <%= link_to t("order.cancel"), update_status_order_path(order, status: :cancel),method: :put,
+            class: "btn btn-sm btn-danger" %>
+          <% end %>
         </td>
       </tr>
       <% end %>

@@ -54,7 +54,7 @@ class CartsController < ApplicationController
                end
     return if @product.check_enought_quantity? quantity
 
-    flash[:danger] = t "product.out_stock"
+    flash[:danger] = t "flash.out_stock"
     redirect_to root_path
   end
 

@@ -28,6 +28,9 @@ Rails.application.routes.draw do
     resources :account_activations, only: :edit
     resources :password_resets, except: %i(index show destroy)
     resources :orders, only: [:new, :create, :index] do
+      member do
+        put :update_status
+      end
       resources :order_details, only: [:index]
     end
   end

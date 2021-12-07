@@ -73,7 +73,6 @@ yarn-debug.log*
 test/
 tmp/
 vendor/
-spec/
 config/credentials.yml.enc
 config/database.yml
 
@@ -88,5 +87,4 @@ config/database.yml
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
-spec/
 

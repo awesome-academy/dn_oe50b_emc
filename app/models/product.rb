@@ -2,12 +2,12 @@ class Product < ApplicationRecord
   acts_as_paranoid
   has_many :rates, dependent: :destroy
   has_many :order_details, dependent: :destroy
-  enum statuses: {Hot: 0, New: 1, Trend: 2}
-  belongs_to :category, foreign_key: "categories_id"
+  enum status: {Hot: 0, New: 1, Trend: 2}
+  belongs_to :category
   delegate :title, to: :category, prefix: true
   has_one_attached :image
-  validates :name, presence: true, length: {minimum: Settings.atrr.lenght_min,
-                                            message: :min_8}
+  validates :name, presence: true, length: {minimum: Settings.atrr.lenght_min}
+
   validates :price, presence: true, numericality: {greater_than_or_equal_to:
                                                   Settings.atrr.price_min}
   validates :quantity, presence: true, numericality: {greater_than_or_equal_to:

@@ -113,6 +113,7 @@ vi:
     update_order_succ: "Cập nhật tình trạng đơn hàng thành công!"
     update_order_fail: "Cập nhật tình trạng đơn hàng thất bại!"
     update_order_already: "Tình trạng đã cập nhật rồi!"
+    user_not_found: "Không tìm thấy người dùng"
   mailer:
     book_store: "Book store"
     hi: "Chào"

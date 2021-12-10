@@ -1,9 +1,9 @@
 class CreateCategories < ActiveRecord::Migration[6.1]
   def change
     create_table :categories do |t|
+      t.integer :parent_id
       t.string :title
       t.text :content
-      t.references :categories, null: false, foreign_key: true
 
       t.timestamps
     end

@@ -52,7 +52,7 @@
         <div class="mb-3">
           <%= f.label :categories_id, t("product.category") %>
           <%= f.label :categories_id, "<span>*</span>".html_safe %>
-          <%= collection_select(:product, :categories_id, Category.all, :id, :title,{},{:class=>"form-control"})%>
+          <%= collection_select(:product, :category_id, Category.all, :id, :title,{},{:class=>"form-control"})%>
         </div>
 
         <div class="mb-3">

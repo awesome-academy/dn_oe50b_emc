@@ -14,16 +14,7 @@ vi:
     update: "Cập nhật"
     back: "Trở về"
     detail: "Chi tiết"
-  product:
-    name: "Tên sản phấm"
-    quantity: "Số lượng"
-    price: "Giá tiền"
-    status: "Tình trạng"
-    author: "Tác giả"
-    publisher: "Nhà xuất bản"
-    category: "Danh mục"
-    description: "Mô tả"
-    img: "Ảnh"
+    search: "Tìm kiếm"
   title:
     sign_up: "Đăng kí"
     login: "Đăng nhập"
@@ -184,13 +175,6 @@ vi:
     requests: "Quản lí yêu cầu"
     statistic: "Quản lí thống kê"
     orders: "Quản lí đơn hàng"
-  crud:
-    create: "Thêm mới"
-    delete: "Xóa"
-    edit: "Chỉnh sửa"
-    update: "Cập nhật"
-    back: "Trở về"
-    detail: "Chi tiết"
   product:
     name: "Tên sản phấm"
     quantity: "Số lượng"

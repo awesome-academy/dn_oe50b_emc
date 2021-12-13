@@ -1,8 +1,9 @@
-class Admin::ProductsController < Admin::BaseController
+class Admin::ProductsController < ApplicationController
   before_action :load_product, only: %i(edit update destroy)
 
   def index
-    @products = Product.ordered_by_price
+    @search = Product.ransack(params[:q])
+    @products = @search.result.ordered_by_price
                        .page(params[:page]).per(Settings.atrr.paging_min)
   end
 
@@ -45,7 +46,7 @@ class Admin::ProductsController < Admin::BaseController
   private
   def product_params
     params.require(:product).permit(:name, :price, :quantity, :status, :author,
-                                    :categories_id, :publisher, :description,
+                                    :category_id, :publisher, :description,
                                     :image)
   end
 

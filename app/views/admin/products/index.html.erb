@@ -3,6 +3,13 @@
   <div class="container-fluid">
     <div class="row">
       <%= link_to t("crud.create"), new_admin_product_path ,class:"nav-link" %>
+      <%= search_form_for [:admin, @search], class: "form-inline" do |f| %>
+        <div class="form-group form-search">
+          <%= f.label :name_cont, t("product.name") %>
+          <%= f.text_field :name_cont, class: "form-control" %>
+          <%= f.submit t("crud.search"), class: "btn btn-success backBtn" %>
+        </div>
+      <% end %>
       <h2><%= t"left_menu.products" %></h2>
       <table class="table table-striped">
         <thead >

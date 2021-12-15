@@ -115,6 +115,7 @@ en:
     update_order_succ: "Update staus order successful!"
     update_order_fail: "Update status order fail!"
     update_order_already: "Order's status update alreay!"
+    user_not_found: "User not found"
   mailer:
     book_store: "Book store"
     hi: "Hi"

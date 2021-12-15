@@ -27,8 +27,6 @@ gem "simplecov"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
-  gem "database_cleaner"
-  gem "factory_bot_rails"
   gem "rspec-rails", "~> 4.0.1"
   gem "shoulda-matchers", "~> 5.0"
   gem "factory_bot_rails"
@@ -37,7 +35,6 @@ group :development, :test do
   gem "rubocop", "~> 0.74.0", require: false
   gem "rubocop-checkstyle_formatter", require: false
   gem "rubocop-rails", "~> 2.3.2", require: false
-  gem "shoulda-matchers", "~> 5.0"
 end
 
 group :development do

@@ -3,7 +3,7 @@ class Admin::ProductsController < ApplicationController
 
   def index
     @products = Product.ordered_by_price
-                       .page(params[:page]).per(Settings.atrr.paging_min)
+                       .page(params[:page]).per(5)
   end
 
   def new

@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
   namespace "api" do
     namespace "v1" do
+      namespace "admin" do
+        resources :orders, except: %i(create destroy) do
+          member do
+            put :approve
+            put :reject
+          end
+        end
+      end
       resources :products
     end
   end

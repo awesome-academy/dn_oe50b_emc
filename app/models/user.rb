@@ -2,7 +2,8 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
+         :recoverable, :rememberable, :validatable,
+         :confirmable
   has_many :rates, dependent: :destroy
   has_many :orders, dependent: :destroy
   has_many :suggests, dependent: :destroy
@@ -24,22 +25,6 @@ class User < ApplicationRecord
             length: {minimum: Settings.validate.length.digist_6},
             format: {with: ID_CARD_REGEX}, uniqueness: true,
             allow_nil: true
-
-  def send_password_reset_email
-    UserMailer.password_reset(self).deliver_now
-  end
-
-  def password_reset_expired?
-    reset_sent_at < Settings.link_expired.hours_2.hours.ago
-  end
-
-  def activate
-    update_columns activated: true, activated_at: Time.zone.now
-  end
-
-  def send_activation_email
-    UserMailer.account_activation(self).deliver_now
-  end
 
   private
 

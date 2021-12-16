@@ -1,9 +1,22 @@
 class ApplicationController < ActionController::Base
+  USER_ATTRS = %w(name email id_card phone_number address password
+                  current_password).freeze
+
   before_action :set_locale
 
   protect_from_forgery with: :exception
+
+  before_action :configure_permitted_parameters, if: :devise_controller?
   include SessionsHelper
   include CartHelper
+
+  protected
+
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.permit(:account_update) do |u|
+      u.permit USER_ATTRS
+    end
+  end
 
   private
   def set_locale

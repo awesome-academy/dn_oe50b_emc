@@ -38,6 +38,7 @@ en:
     cart: "Cart"
     my_order: "My order"
     order_detail: "Order details"
+    resend_confirmation: "Resend confirmation"
   language:
     vi: "Vietnamese"
     en: "English"
@@ -62,6 +63,7 @@ en:
     create: "Create my account"
     submit: "Submit"
     update_pass: "Update password"
+    resend_confirmation_instructions: "Resend confirmation instructions"
   user:
     new:
       name: "Name"
@@ -78,11 +80,17 @@ en:
       order: "Cart"
       remember: "Remember me on this computer"
       order_history: "Order history"
+      resend_confirmation: "Didn't receive confirmation instructions?"
+      current_password: "Current password"
     update:
       td: "Update your profile"
       save: "Save changes"
       activate: "Activate"
       forgot_pass: "(forgot password)"
+      note_pass: "(leave blank if you don't want to change it)"
+      note_pass2: "(we need your current password to confirm your changes)"
+      note_pass3: "characters minimum"
+      waiting_confirmation: "Currently waiting confirmation for:"
   flash:
     create_success: "Account successfully created"
     email_password_combination: "Invalid email/password combination"

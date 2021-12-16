@@ -16,11 +16,9 @@ Rails.application.routes.draw do
     root "static_pages#home"
 
     get "home", to: "static_pages#home", as: :home_client
-    get "/signup", to: "users#new"
-    post "/signup", to: "users#create"
-    get "/login", to: "sessions#new"
-    post "/login", to: "sessions#create"
-    delete "/logout", to: "sessions#destroy"
+
+    devise_for :users
+
     get "orders/new"
     resources :carts, only: [:index] do
       collection do
@@ -29,7 +27,6 @@ Rails.application.routes.draw do
         delete "delete/:id", to: "carts#delete", as: "delete_from"
       end
     end
-    resources :users
     resources :static_pages, only: [:index, :show]
     resources :account_activations, only: :edit
     resources :password_resets, except: %i(index show destroy)

@@ -52,11 +52,11 @@ ActiveRecord::Schema.define(version: 2021_12_14_063159) do
     t.decimal "price", precision: 10
     t.integer "quantity"
     t.bigint "orders_id", null: false
-    t.bigint "product_id", null: false
+    t.bigint "products_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["orders_id"], name: "index_order_details_on_orders_id"
-    t.index ["product_id"], name: "index_order_details_on_products_id"
+    t.index ["products_id"], name: "index_order_details_on_products_id"
   end
 
   create_table "orders", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
@@ -91,10 +91,10 @@ ActiveRecord::Schema.define(version: 2021_12_14_063159) do
     t.string "comment"
     t.string "rate"
     t.bigint "user_id", null: false
-    t.bigint "product_id", null: false
+    t.bigint "products_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["product_id"], name: "index_rates_on_products_id"
+    t.index ["products_id"], name: "index_rates_on_products_id"
     t.index ["user_id"], name: "index_rates_on_user_id"
   end
 
@@ -109,31 +109,35 @@ ActiveRecord::Schema.define(version: 2021_12_14_063159) do
   end
 
   create_table "users", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
     t.string "name"
-    t.string "email"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.string "role"
-    t.string "password_digest"
     t.string "id_card"
     t.string "phone_number"
     t.string "address"
-    t.string "remember_digest"
-    t.string "activation_digest"
-    t.boolean "activated", default: false
-    t.datetime "activated_at"
     t.boolean "admin"
-    t.string "reset_digest"
-    t.datetime "reset_sent_at"
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.string "confirmation_token"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
+    t.string "unconfirmed_email"
+    t.integer "failed_attempts", default: 0, null: false
+    t.string "unlock_token"
+    t.datetime "locked_at"
+    t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "order_details", "orders", column: "orders_id"
-  add_foreign_key "order_details", "products"
+  add_foreign_key "order_details", "products", column: "products_id"
   add_foreign_key "orders", "users"
   add_foreign_key "products", "categories"
-  add_foreign_key "rates", "products"
+  add_foreign_key "rates", "products", column: "products_id"
   add_foreign_key "rates", "users"
   add_foreign_key "suggests", "users"
 end

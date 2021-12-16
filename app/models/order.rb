@@ -3,6 +3,7 @@ class Order < ApplicationRecord
   has_many :order_details, dependent: :destroy
   scope :ordered_by_price, ->{order(:total_money)}
   scope :sort_by_created, ->{order(created_at: :desc)}
+  scope :approved, ->{where(status: :approve)}
   has_many :products, through: :order_details
   scope :ordered_by_price, ->{order(:total_money)}
   validates :name_customer, presence: true,

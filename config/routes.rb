@@ -8,6 +8,10 @@ Rails.application.routes.draw do
       end
     end
     resources :products
+    resources :statistics, only: %i(index)
+    get :statistic_month, to: "statistics#month"
+    get :statistic_quarter, to: "statistics#quarter"
+    get :statistic_year, to: "statistics#year"
   end
   get "password_resets/new"
   get "password_resets/edit"

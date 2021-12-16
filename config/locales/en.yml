@@ -175,6 +175,10 @@ en:
     total_money: "Total money"
     operation: "Operation"
     cancel: "Cancel order"
+    statistic:
+      month: "Statistic orders by month"
+      year: "Statistic orders by year"
+      quarter: "Statistic orders by quarter"
   cart:
     add_success: "The product has been added to cart"
     update_quantity: "The product has been updated to the quantity in the cart"

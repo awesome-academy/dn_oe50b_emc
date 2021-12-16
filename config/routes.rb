@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  namespace "api" do
+    namespace "v1" do
+      resources :products
+    end
+  end
   devise_for :users, only: :omniauth_callbacks,
               controllers: {omniauth_callbacks: "omniauth_callbacks"}
 

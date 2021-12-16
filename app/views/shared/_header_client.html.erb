@@ -33,13 +33,12 @@
         <% if user_signed_in? %>
           <li class="dropdown">
             <%= link_to "#", class: "dropdown-toggle", "data-toggle": "dropdown" do %>
-              <i class="fas fa-bell rgtspace-5"></i>
-               <span class="btn-badge btn-badge--red">
-                  <%= current_user.notifications.unread %>
-               </span>
-              <b class="caret"></b>
+            <p id="open_notificationcus">
+              <%= render "notifications/counter", counter: current_user.notifications.unread %>
+            </p>
+            <b class="caret"></b>
             <% end %>
-            <ul class="dropdown-menu scroll-noti">
+            <ul class="dropdown-menu scroll-noti" id="notificationList">
               <%= render current_user.notifications.sort_by_created %>
             </ul>
           </li>

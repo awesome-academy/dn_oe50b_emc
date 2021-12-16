@@ -7,6 +7,10 @@ class User < ApplicationRecord
   has_many :rates, dependent: :destroy
   has_many :orders, dependent: :destroy
   has_many :suggests, dependent: :destroy
+  has_many :notifications, class_name: Notification.name,
+                        foreign_key: :receiver_id, dependent: :destroy
+  has_many :send_notifications, class_name: Notification.name,
+                        foreign_key: :sender_id, dependent: :destroy
 
   PHONE_NUMBER_REGEX = /(84|0[3|5|7|8|9])+([0-9]{8})\b/i.freeze
   ID_CARD_REGEX = /([0-9]{9})||([0-9]{8})\b/i.freeze

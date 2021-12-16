@@ -122,6 +122,7 @@ vi:
     product_not_found: "Sản phẩm không có"
     not_found: "Không tìm thấy!"
     reject_access: "Bạn không có quyền truy cập!"
+    not_login: "Hãy đăng nhập trước"
     order_not_found: "Không tìm thấy đơn hàng"
     order_cancel: "Đã hủy đơn hàng "
     order_cancel_fail: "Hủy đơn hàng thất bại"

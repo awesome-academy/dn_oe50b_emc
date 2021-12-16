@@ -123,6 +123,7 @@ en:
     product_not_found: "Product not found"
     not_found: "Not found!"
     reject_access: "You don't have permisson to access!"
+    not_login: "Let's login first"
     order_not_found: "Order not found"
     order_cancel: "Order canceled"
     order_cancel_fail: "Canceled failed order"

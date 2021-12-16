@@ -46,10 +46,10 @@ class Admin::OrdersController < Admin::BaseController
 
   private
   def load_order
-    @order = Order.find_by id: params[:id]
+    @order = Order.find_by slug: params[:id]
     return if @order
 
-    flash[:warning] = t("flash.not_found", id: params[:id])
+    flash[:warning] = t("flash.not_found")
     redirect_to action: :index
   end
 

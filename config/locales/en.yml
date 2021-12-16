@@ -14,6 +14,8 @@ en:
     update: "Update"
     back: "Back"
     detail: "Detail"
+    search: "Search"
+    choose: "Choose info"
   product:
     name: "Name product"
     quantity: "Quantity"
@@ -26,6 +28,7 @@ en:
     category: "Category"
     description: "Description"
     not_valid: "Product not valid"
+    name_author: "Name product or author"
   title:
     sign_up: "Sign up"
     login: "Login"
@@ -103,6 +106,7 @@ en:
     update_fail: "Update product fail!"
     confirm_hide: "Are you sure to hide this product?"
     product_empty: "Your list product is an empty"
+    order_empty: "List order is empty, not found"
     product_not_found: "Product not found"
     not_found: "Not found!"
     reject_access: "You don't have permisson to access!"

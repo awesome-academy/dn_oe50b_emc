@@ -186,6 +186,14 @@ vi:
     total_money: "Tổng tiền"
     operation: "Thao tác"
     cancel: "Hủy đơn hàng"
+    at_time: "Vào lúc: "
+    noti:
+      approve: "Đơn hàng của bạn đã được duyệt, hãy kiểm tra email"
+      reject: "Đơn hàng của bạn bị từ chối, hãy kiểm tra email"
+      content_approve: "Đơn hàng của bạn đã được duyệt thành công,
+       hãy kiểm tra email để biết thêm thông tin chi tiết đơn hàng"
+      content_reject: "Rất tiếc, vì một vài lí do mà đơn hàng của bạn không
+        thể thực hiện thành công, hãy kiểm tra email để biết thêm thông tin"
     statistic:
       month: "Thống kê hóa đơn theo tháng"
       year: "Thống kê hóa đơn theo năm"

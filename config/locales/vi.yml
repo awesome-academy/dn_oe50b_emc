@@ -14,6 +14,8 @@ vi:
     update: "Cập nhật"
     back: "Trở về"
     detail: "Chi tiết"
+    search: "Tìm kiếm"
+    choose: "Chọn thông tin"
   product:
     name: "Tên sản phấm"
     quantity: "Số lượng"
@@ -24,6 +26,8 @@ vi:
     category: "Danh mục"
     description: "Mô tả"
     img: "Ảnh"
+    not_valid: "Sản phẩm không hợp lệ"
+    name_author: "Tên sản phẩm hoặc tác giả"
   title:
     sign_up: "Đăng kí"
     login: "Đăng nhập"
@@ -100,7 +104,8 @@ vi:
     hide_succ: "Ẩn sản phẩm thành công!"
     update_fail: "Cập nhật sản phẩm thất bại!"
     confirm_hide: "Bạn có chắc chắn ẩn sản phẩm này?"
-    product_empty: "Danh sách sản phẩm hiện đang trống"
+    product_empty: "Danh sách sản phẩm trống, không tìm thấy sản phẩm"
+    order_empty: "Danh sách đơn hàng trống, không tìm thấy đơn hàng"
     product_not_found: "Sản phẩm không có"
     not_found: "Không tìm thấy!"
     reject_access: "Bạn không có quyền truy cập!"
@@ -185,24 +190,6 @@ vi:
     requests: "Quản lí yêu cầu"
     statistic: "Quản lí thống kê"
     orders: "Quản lí đơn hàng"
-  crud:
-    create: "Thêm mới"
-    delete: "Xóa"
-    edit: "Chỉnh sửa"
-    update: "Cập nhật"
-    back: "Trở về"
-    detail: "Chi tiết"
-  product:
-    name: "Tên sản phấm"
-    quantity: "Số lượng"
-    price: "Giá tiền"
-    status: "Tình trạng"
-    author: "Tác giả"
-    publisher: "Nhà xuất bản"
-    category: "Danh mục"
-    description: "Mô tả"
-    img: "Ảnh"
-    not_valid: "Sản phẩm không hợp lệ"
   activerecord:
     errors:
       messages:

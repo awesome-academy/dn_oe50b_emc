@@ -2,8 +2,9 @@ class Admin::OrdersController < Admin::BaseController
   before_action :load_order, :load_detail_total,
                 except: %i(index)
   def index
-    @orders = Order.ordered_by_price
-                   .page(params[:page]).per(Settings.atrr.paging_min)
+    @search = Order.ransack(params[:q])
+    @orders = @search.result(distinct: true).ordered_by_price
+                     .page(params[:page]).per(Settings.atrr.paging_min)
   end
 
   def show

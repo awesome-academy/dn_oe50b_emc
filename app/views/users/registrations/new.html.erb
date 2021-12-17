@@ -15,7 +15,7 @@
       <div class="field">
         <%= f.label t("user.new.pass") %>
         <% if @minimum_password_length %>
-        <em>(<%= @minimum_password_length %> characters minimum)</em>
+        <em>(<%= "#{@minimum_password_length} #{t("user.update.note_pass3")}" %>)</em>
         <% end %><br />
         <%= f.password_field :password, autocomplete: "new-password", class: "form-control" %>
       </div>

@@ -37,6 +37,7 @@ vi:
     cart: "Giỏ hàng"
     my_order: "Đơn hàng của tôi"
     order_detail: "Chi tiết đơn hàng"
+    resend_confirmation: "Gửi lại xác nhận"
   language:
     vi: "Tiếng Việt"
     en: "Tiếng Anh"
@@ -61,6 +62,7 @@ vi:
     create: "Tạo tài khoản của tôi"
     submit: "Nộp"
     update_pass: "Cập nhật mật khẩu"
+    resend_confirmation_instructions: "Gửi lại hướng dẫn xác nhận"
   user:
     new:
       name: "Tên"
@@ -77,11 +79,17 @@ vi:
       order: "Giỏ hàng"
       remember: "Hãy nhớ tôi trên máy tính này"
       order_history: "Lịch sử đặt hàng"
+      resend_confirmation: "Không nhận được hướng dẫn xác nhận?"
+      current_password: "Mật khẩu hiện tại"
     update:
       td: "Cập nhật hồ sơ của bạn"
       save: "Lưu thay đổi"
       activate: "Kích hoạt"
       forgot_pass: "(quên mật khẩu)"
+      note_pass: "(để trống nếu bạn không muốn thay đổi nó)"
+      note_pass2: "(chúng tôi cần mật khẩu hiện tại của bạn để xác nhận các thay đổi của bạn)"
+      note_pass3: "ký tự tối thiểu"
+      waiting_confirmation: "Hiện đang chờ xác nhận cho:"
   flash:
     create_success: "Tạo tài khoản thành công"
     email_password_combination: "Email/mật khẩu không hợp lệ"

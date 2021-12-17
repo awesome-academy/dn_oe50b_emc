@@ -1,0 +1,31 @@
+<% provide :title, t("title.login") %>
+<h1><%= t"title.login" %></h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="field">
+        <%= f.label t "user.new.email" %><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
+      </div>
+
+      <div class="field">
+        <%= f.label t"user.new.pass" %><br />
+        <%= f.password_field :password, autocomplete: "current-password", class: "form-control" %>
+      </div>
+
+      <% if devise_mapping.rememberable? %>
+        <%= f.label :remember_me, class: "checkbox inline" do %>
+          <%= f.check_box :remember_me, class: "style_checkbox" %>
+          <span><%= t "user.new.remember" %></span>
+        <% end %>
+      <% end %>
+
+      <div class="actions">
+        <%= f.submit t("title.login"), class: "btn btn-primary button_custom" %>
+      </div>
+    <% end %>
+
+    <%= render "users/shared/links" %>
+  </div>
+</div>

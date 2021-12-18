@@ -44,21 +44,21 @@ ActiveRecord::Schema.define(version: 2021_12_20_151616) do
     t.integer "parent_id"
     t.string "title"
     t.text "content"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", precision: 6
+    t.datetime "updated_at", precision: 6
   end
 
   create_table "order_details", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.decimal "price", precision: 10
     t.integer "quantity"
-    t.bigint "orders_id", null: false
-    t.bigint "products_id", null: false
+    t.bigint "order_id", null: false
+    t.bigint "product_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.datetime "deleted_at"
     t.index ["deleted_at"], name: "index_order_details_on_deleted_at"
-    t.index ["orders_id"], name: "index_order_details_on_orders_id"
-    t.index ["products_id"], name: "index_order_details_on_products_id"
+    t.index ["order_id"], name: "index_order_details_on_orders_id"
+    t.index ["product_id"], name: "index_order_details_on_products_id"
   end
 
   create_table "orders", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
@@ -137,8 +137,8 @@ ActiveRecord::Schema.define(version: 2021_12_20_151616) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "order_details", "orders", column: "orders_id"
-  add_foreign_key "order_details", "products", column: "products_id"
+  add_foreign_key "order_details", "orders"
+  add_foreign_key "order_details", "products"
   add_foreign_key "orders", "users"
   add_foreign_key "products", "categories"
   add_foreign_key "rates", "products", column: "products_id"

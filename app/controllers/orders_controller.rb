@@ -15,6 +15,7 @@ class OrdersController < ApplicationController
       create_order_details
       @order.assign_attributes(order_params)
       @order.save!
+      send_mail_new_order
       flash[:success] = t "order.order_success"
       session[:cart] = nil
       redirect_to root_path
@@ -83,5 +84,10 @@ class OrdersController < ApplicationController
     store_location
     flash[:danger] = t "flash.please_login"
     redirect_to login_url
+  end
+
+  def send_mail_new_order
+    OrderMailer.new_orders(@order, @order.order_details.includes(:product),
+                           @order.total_money).deliver_now
   end
 end

@@ -246,3 +246,9 @@ vi:
   orders_mailer:
     content_change: "Tình trạng đơn hàng của bạn đã thay đổi,
     vui lòng xem nội dung để biết thêm"
+    content_new_order: "BookStore rất vui thông báo đơn hàng của quý khách đã tiếp nhận và trong quá trình xử lý.
+    Vui lòng xem chi tiết đơn hàng bên dưới để xác nhận."
+    hi: "Chào %{name}"
+    name_receiver: "Tên người nhận: %{name_receiver}"
+    phone_number: "Số điện thoại: %{phone_number}"
+    address: "Địa chỉ: %{address}"

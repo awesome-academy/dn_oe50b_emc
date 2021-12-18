@@ -1,0 +1,18 @@
+<% provide :title, t("left_menu.statistic_product") %>
+<div id="content">
+  <%= render "shared/change_languages" %>
+  <div class="container-fluid">
+    <div class="row">
+      <h1><%= t"product.statistic.month" %></h1>
+      <%= line_chart admin_statistic_product_by_period_path( period: "month") %>
+    </div>
+    <div class="row">
+      <h1><%= t"product.statistic.quarter" %></h1>
+      <%= column_chart admin_statistic_product_by_period_path( period: "quarter") %>
+    </div>
+    <div class="row">
+      <h1><%= t"product.statistic.year" %></h1>
+      <%= pie_chart admin_statistic_product_by_period_path( period: "year"), donut: true %>
+    </div>
+  </div>
+</div>

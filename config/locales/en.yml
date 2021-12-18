@@ -7,6 +7,7 @@ en:
     requests: "Management requests"
     statistic: "Management statistic"
     orders: "Management orders"
+    statistic_product: "Management statistic product"
   crud:
     create: "Create"
     delete: "Delete"
@@ -33,6 +34,10 @@ en:
     sort_product: "Sort Products"
     sort_price: "By Price"
     sort_date_create: "By Date created"
+    statistic:
+      month: "Statistic products by month"
+      year: "Statistic products by year"
+      quarter: "Statistic products by quarter"
   title:
     sign_up: "Sign up"
     login: "Login"

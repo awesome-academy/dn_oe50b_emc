@@ -7,6 +7,7 @@ vi:
     requests: "Quản lí yêu cầu"
     statistic: "Quản lí thống kê"
     orders: "Quản lí đơn hàng"
+    statistic_product: "Quản lí thống kê sản phẩm"
   crud:
     create: "Thêm mới"
     delete: "Xóa"
@@ -32,6 +33,10 @@ vi:
     sort_product: "Sắp xếp sản phẩm"
     sort_price: "Theo giá"
     sort_date_create: "Theo Ngày tạo"
+    statistic:
+      month: "Thống kê sản phẩm theo tháng"
+      year: "Thống kê sẩn phẩm theo năm"
+      quarter: "Thống kê sản phẩm theo quý"
   title:
     sign_up: "Đăng kí"
     login: "Đăng nhập"

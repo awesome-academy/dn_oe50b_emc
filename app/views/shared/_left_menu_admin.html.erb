@@ -42,6 +42,11 @@
         <% end %>
       </li>
       <li>
+        <%= link_to admin_statistic_products_path do %>
+          <i class="zmdi zmdi-comment-more"></i> <%= t "left_menu.statistic_product" %>
+        <% end %>
+      </li>
+      <li>
         <%= link_to t("user.new.logout"), logout_path, method: :delete %>
       </li>
     </ul>

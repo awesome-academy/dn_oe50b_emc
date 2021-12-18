@@ -59,17 +59,19 @@
     </div>
     <div class="row">
       <div class="btn-group alg-right-pad">
-        <button type="button" class="btn btn-default"><strong>1235  </strong>items</button>
+        <button type="button" class="btn btn-default">
+          <strong><%= @products.count %></strong>
+          <%= t "product.item" %>
+        </button>
         <div class="btn-group">
           <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
-            Sort Products &nbsp;
+            <%= t "product.sort_product" %> &nbsp;
             <span class="caret"></span>
           </button>
           <ul class="dropdown-menu">
-            <li><a href="#">By Price Low</a></li>
+            <li><%= sort_link(@q, :price, t("product.sort_price"), default_order: :asc) %></li>
             <li class="divider"></li>
-            <li><a href="#">By Price High</a></li>
-            <li class="divider"></li>
+            <li><%= sort_link(@q, :created_at, t("product.sort_date_create"), default_order: :asc) %></li>
           </ul>
         </div>
       </div>

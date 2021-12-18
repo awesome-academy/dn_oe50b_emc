@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
   USER_ATTRS = %w(name email id_card phone_number address password
                   current_password).freeze
 
-  before_action :set_locale
+  before_action :set_locale, :set_search
 
   protect_from_forgery with: :exception
 
@@ -19,6 +19,11 @@ class ApplicationController < ActionController::Base
   end
 
   private
+
+  def set_search
+    @q = Product.ransack(params[:q])
+  end
+
   def set_locale
     I18n.locale = params[:locale] if params[:locale].present?
   end

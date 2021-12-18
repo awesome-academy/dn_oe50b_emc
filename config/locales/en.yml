@@ -29,6 +29,10 @@ en:
     description: "Description"
     not_valid: "Product not valid"
     name_author: "Name product or author"
+    item: "items"
+    sort_product: "Sort Products"
+    sort_price: "By Price"
+    sort_date_create: "By Date created"
   title:
     sign_up: "Sign up"
     login: "Login"

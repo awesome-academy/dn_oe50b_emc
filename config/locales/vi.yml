@@ -28,6 +28,10 @@ vi:
     img: "Ảnh"
     not_valid: "Sản phẩm không hợp lệ"
     name_author: "Tên sản phẩm hoặc tác giả"
+    item: "mặt hàng"
+    sort_product: "Sắp xếp sản phẩm"
+    sort_price: "Theo giá"
+    sort_date_create: "Theo Ngày tạo"
   title:
     sign_up: "Đăng kí"
     login: "Đăng nhập"

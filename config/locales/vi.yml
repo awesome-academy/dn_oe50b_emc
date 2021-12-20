@@ -174,6 +174,11 @@ vi:
     total_money: "Tổng tiền"
     operation: "Thao tác"
     cancel: "Hủy đơn hàng"
+    statistic:
+      month: "Thống kê hóa đơn theo tháng"
+      year: "Thống kê hóa đơn theo năm"
+      quarter: "Thống kê hóa đơn theo quý"
+
   cart:
     add_success: "Sản phẩm đã được thêm vào giỏ hàng"
     update_quantity: "Sản phẩm đã được cập nhật số lượng"

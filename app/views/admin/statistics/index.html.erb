@@ -1,0 +1,17 @@
+<div id="content">
+  <%= render "shared/change_languages" %>
+  <div class="container-fluid">
+    <div class="row">
+      <h1><%= t"order.statistic.month" %></h1>
+      <%= line_chart admin_statistic_month_path %>
+    </div>
+    <div class="row">
+      <h1><%= t"order.statistic.quarter" %></h1>
+      <%= column_chart admin_statistic_quarter_path %>
+    </div>
+    <div class="row">
+      <h1><%= t"order.statistic.year" %></h1>
+      <%= pie_chart admin_statistic_year_path, donut: true %>
+    </div>
+  </div>
+</div>

@@ -24,6 +24,8 @@
       <div class="actions">
         <%= f.submit t("title.login"), class: "btn btn-primary button_custom" %>
       </div>
+      <%= link_to t("user.new.login_facebook"), user_facebook_omniauth_authorize_path, method: :post,
+        class: "btn btn-info" %><br>
     <% end %>
 
     <%= render "users/shared/links" %>

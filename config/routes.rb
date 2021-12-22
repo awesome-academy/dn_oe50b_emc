@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  devise_for :users, only: :omniauth_callbacks,
+              controllers: {omniauth_callbacks: "omniauth_callbacks"}
+
   default_url_options :host => "localhost:3000"
   namespace :admin do
     resources :orders, except: %i(create destroy) do
@@ -21,7 +24,7 @@ Rails.application.routes.draw do
 
     get "home", to: "static_pages#home", as: :home_client
 
-    devise_for :users
+    devise_for :users, skip: :omniauth_callbacks
 
     as :user do
       get "signup", to: "devise/registrations#new"

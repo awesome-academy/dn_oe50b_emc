@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_18_190739) do
+ActiveRecord::Schema.define(version: 2021_12_20_151616) do
 
   create_table "active_storage_attachments", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name", null: false
@@ -44,21 +44,21 @@ ActiveRecord::Schema.define(version: 2021_12_18_190739) do
     t.integer "parent_id"
     t.string "title"
     t.text "content"
-    t.datetime "created_at", precision: 6
-    t.datetime "updated_at", precision: 6
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "order_details", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.decimal "price", precision: 10
     t.integer "quantity"
-    t.bigint "order_id", null: false
-    t.bigint "product_id", null: false
+    t.bigint "orders_id", null: false
+    t.bigint "products_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.datetime "deleted_at"
     t.index ["deleted_at"], name: "index_order_details_on_deleted_at"
-    t.index ["order_id"], name: "index_order_details_on_orders_id"
-    t.index ["product_id"], name: "index_order_details_on_products_id"
+    t.index ["orders_id"], name: "index_order_details_on_orders_id"
+    t.index ["products_id"], name: "index_order_details_on_products_id"
   end
 
   create_table "orders", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
@@ -128,6 +128,8 @@ ActiveRecord::Schema.define(version: 2021_12_18_190739) do
     t.integer "failed_attempts", default: 0, null: false
     t.string "unlock_token"
     t.datetime "locked_at"
+    t.string "provider"
+    t.string "uid"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
@@ -135,8 +137,8 @@ ActiveRecord::Schema.define(version: 2021_12_18_190739) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "order_details", "orders"
-  add_foreign_key "order_details", "products"
+  add_foreign_key "order_details", "orders", column: "orders_id"
+  add_foreign_key "order_details", "products", column: "products_id"
   add_foreign_key "orders", "users"
   add_foreign_key "products", "categories"
   add_foreign_key "rates", "products", column: "products_id"

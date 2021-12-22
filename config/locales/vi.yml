@@ -85,6 +85,7 @@ vi:
       order_history: "Lịch sử đặt hàng"
       resend_confirmation: "Không nhận được hướng dẫn xác nhận?"
       current_password: "Mật khẩu hiện tại"
+      login_facebook: "Đăng nhập với facebook"
     update:
       td: "Cập nhật hồ sơ của bạn"
       save: "Lưu thay đổi"

@@ -86,6 +86,7 @@ en:
       order_history: "Order history"
       resend_confirmation: "Didn't receive confirmation instructions?"
       current_password: "Current password"
+      login_facebook: "Login Facebook"
     update:
       td: "Update your profile"
       save: "Save changes"

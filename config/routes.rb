@@ -15,6 +15,9 @@ Rails.application.routes.draw do
     get :statistic_month, to: "statistics#month"
     get :statistic_quarter, to: "statistics#quarter"
     get :statistic_year, to: "statistics#year"
+
+    resources :statistic_products, only: %i(index)
+    get :statistic_product_by_period, to: "statistic_products#chart_by_period"
   end
   get "password_resets/new"
   get "password_resets/edit"
@@ -50,5 +53,4 @@ Rails.application.routes.draw do
       resources :order_details, only: [:index]
     end
   end
-
 end

@@ -20,3 +20,8 @@ regex:
 
 per_3: 6
 per_5: 5
+
+period:
+  month: "month"
+  quarter: "quarter"
+  year: "year"

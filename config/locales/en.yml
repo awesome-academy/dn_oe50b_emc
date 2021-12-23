@@ -73,6 +73,7 @@ en:
     submit: "Submit"
     update_pass: "Update password"
     resend_confirmation_instructions: "Resend confirmation instructions"
+    login_with: "Login with"
   user:
     new:
       name: "Name"

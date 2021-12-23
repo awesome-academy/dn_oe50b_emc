@@ -72,6 +72,7 @@ vi:
     submit: "Nộp"
     update_pass: "Cập nhật mật khẩu"
     resend_confirmation_instructions: "Gửi lại hướng dẫn xác nhận"
+    login_with: "Đăng nhập với"
   user:
     new:
       name: "Tên"

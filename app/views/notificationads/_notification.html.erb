@@ -1,0 +1,13 @@
+<% notifi.each do |notification| %>
+  <% if notification.read_at.nil? %>
+    <li class="notificatorlist read-mask">
+      <%= link_to notification.event, update_to_read_notificationad_path(notification.id), method: :put %>
+      <span> <%= notification.created_at.strftime("%d %b. %Y") %></span>
+    </li>
+  <% else %>
+    <li class="notificatorlist">
+      <%= link_to notification.event, admin_order_path(notification.order_id) %>
+      <span> <%= notification.created_at.strftime("%d %b. %Y") %></span>
+    </li>
+  <% end %>
+<% end %>

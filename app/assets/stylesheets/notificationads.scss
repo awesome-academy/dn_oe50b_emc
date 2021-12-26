@@ -1,0 +1,115 @@
+@import "color";
+
+ul.notificator {
+  display: inline-block;
+  float:right;
+  margin-top: 10px;
+  margin-right: 5px;
+  li
+  {
+    position: relative;
+    list-style: none;
+
+    i
+    {
+      color: $white_color;
+    }
+  }
+}
+
+#notification-counter {
+  position: absolute;
+  top: -30px;
+  left: 20px;
+
+  background-color: rgb(212, 78, 3);
+  color: $white_color;
+  border-radius: 3px;
+  padding: 1px 3px;
+  font: 8px Verdana;
+}
+ul #notificationList
+{
+  li
+  {
+    position:relative;
+    border-bottom: #dddddd 1px solid;
+  }
+  span
+  {
+    color: #989494;
+    font-size: 8px;
+  }
+}
+
+#notificationsBody  ul
+{
+  padding-left: 0;
+}
+
+#notificationContainer
+{
+  background-color: $white_color;
+  border: 1px solid rgba(100, 100, 100, .4);
+  -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, .25);
+  overflow: visible;
+  position: absolute;
+  top: 70px;
+  margin-left: -253px;
+  width: 300px;
+  z-index: 0;
+  display: none;
+}
+
+
+#notificationContainer:before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  color: transparent;
+  border: 10px solid black;
+  border-color: transparent transparent white;
+  margin-top: -20px;
+  margin-left: 258px;
+}
+
+#notificationTitle
+{
+  top: -35px;
+  font-weight: bold;
+  padding: 8px;
+  font-size: 13px;
+  background-color: $white_light;
+  position: absolute;
+  z-index: 1;
+  width: 298px;
+  border-bottom: 1px solid #d44e03;
+  color: $red;
+}
+
+#notificationsBody
+{
+  padding: 3px 0px 0px 0px !important;
+  min-height:300px;
+  max-height:300px;
+  overflow: auto;
+  position: relative;
+  width: 100%;
+}
+
+
+#notificationFooter
+{
+  background-color: $white_light_1;
+  text-align: center;
+  font-weight: bold;
+  padding: 8px;
+  font-size: 12px;
+  border-top: 1px solid $white_shadow;
+}
+
+.read-mask{
+  font-weight: bold;
+}

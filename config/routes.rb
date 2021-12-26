@@ -53,5 +53,11 @@ Rails.application.routes.draw do
       end
       resources :order_details, only: [:index]
     end
+
+    resources :notificationads, only: %i(index) do
+      member do
+        put :update_to_read
+      end
+    end
   end
 end

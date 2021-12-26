@@ -8,6 +8,8 @@ Rails.application.routes.draw do
               controllers: {omniauth_callbacks: "omniauth_callbacks"}
 
   default_url_options :host => "localhost:3000"
+  mount ActionCable.server => "/cable"
+
   namespace :admin do
     resources :orders, except: %i(create destroy) do
       member do
@@ -43,7 +45,7 @@ Rails.application.routes.draw do
     get "orders/new"
     resources :carts, only: [:index] do
       collection do
-        post "add_to_cart/:id", to: "carts#add_to_cart", as: "add_to"
+        get "add_to_cart/:id", to: "carts#add_to_cart", as: "add_to"
         put "update/:id", to: "carts#update", as: "update_to"
         delete "delete/:id", to: "carts#delete", as: "delete_from"
       end

@@ -25,3 +25,5 @@ period:
   month: "month"
   quarter: "quarter"
   year: "year"
+
+wait_time: 1

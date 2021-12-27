@@ -4,6 +4,11 @@
       <%= link_to notification.event, update_to_read_notificationad_path(notification.id), method: :put %>
       <span> <%= notification.created_at.strftime("%d %b. %Y") %></span>
     </li>
+  <% elsif notification.order_id.nil? %>
+    <li class="notificatorlist">
+      <%= link_to notification.event, admin_orders_path %>
+      <span> <%= notification.created_at.strftime("%d %b. %Y") %></span>
+    </li>
   <% else %>
     <li class="notificatorlist">
       <%= link_to notification.event, admin_order_path(notification.order_id) %>

@@ -14,6 +14,9 @@ class Admin::OrdersController < Admin::BaseController
   def approve
     ActiveRecord::Base.transaction do
       @order.approve!
+      Notification.create(recipient: @order.user, actor: current_user,
+                          title: t("order.noti.approve"),
+                          content: t("order.noti.content_approve"))
       send_mail_change_status
     end
   rescue ActiveRecord::RecordInvalid
@@ -28,6 +31,9 @@ class Admin::OrdersController < Admin::BaseController
     ActiveRecord::Base.transaction do
       update_quantity_reject @order if @order.pending? || @order.approve?
       @order.pending? ? @order.not_accept! : @order.cancel!
+      Notification.create(recipient: @order.user, actor: current_user,
+                          title: t("order.noti.reject"),
+                          content: t("order.noti.content_reject"))
       send_mail_change_status
     end
   rescue ActiveRecord::RecordInvalid

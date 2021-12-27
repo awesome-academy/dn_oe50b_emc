@@ -43,6 +43,7 @@ Rails.application.routes.draw do
         delete "delete/:id", to: "carts#delete", as: "delete_from"
       end
     end
+    resources :notifications, only: [:show]
     resources :static_pages, only: [:index, :show]
     resources :account_activations, only: :edit
     resources :password_resets, except: %i(index show destroy)

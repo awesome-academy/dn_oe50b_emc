@@ -187,6 +187,14 @@ en:
     total_money: "Total money"
     operation: "Operation"
     cancel: "Cancel order"
+    at_time: "At time: "
+    noti:
+      approve: "Your order is approved, please check email to see detail"
+      reject: "Your order is rejected, please check email to see detail"
+      content_approve: "Your order is approved, let's check your email to
+                        know detail"
+      content_reject: "Sorry, for some reasons your order is rejected, please
+                        check your email to know detail"
     statistic:
       month: "Statistic orders by month"
       year: "Statistic orders by year"

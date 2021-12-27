@@ -37,6 +37,9 @@ vi:
       month: "Thống kê sản phẩm theo tháng"
       year: "Thống kê sẩn phẩm theo năm"
       quarter: "Thống kê sản phẩm theo quý"
+    hot: "Sản phẩm Hot"
+    new: "Sản phẩm Mới"
+    trend: "Sản phẩm Trend"
   title:
     sign_up: "Đăng kí"
     login: "Đăng nhập"
@@ -187,6 +190,7 @@ vi:
     operation: "Thao tác"
     cancel: "Hủy đơn hàng"
     at_time: "Vào lúc: "
+    recovery: "Khôi phục đơn hàng"
     noti:
       approve: "Đơn hàng của bạn đã được duyệt, hãy kiểm tra email"
       reject: "Đơn hàng của bạn bị từ chối, hãy kiểm tra email"

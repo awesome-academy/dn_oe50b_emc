@@ -38,6 +38,9 @@ en:
       month: "Statistic products by month"
       year: "Statistic products by year"
       quarter: "Statistic products by quarter"
+    hot: "Product Hot"
+    new: "Product New"
+    trend: "Product Trend"
   title:
     sign_up: "Sign up"
     login: "Login"
@@ -187,6 +190,7 @@ en:
     total_money: "Total money"
     operation: "Operation"
     cancel: "Cancel order"
+    recovery: "Order recovery"
     at_time: "At time: "
     noti:
       approve: "Your order is approved, please check email to see detail"

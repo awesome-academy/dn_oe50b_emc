@@ -10,6 +10,7 @@ Rails.application.routes.draw do
         end
       end
       resources :products
+      resources :orders, only: %i(create show)
     end
   end
   devise_for :users, only: :omniauth_callbacks,

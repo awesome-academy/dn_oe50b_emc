@@ -4,6 +4,7 @@ git_source(:github){|repo| "https://github.com/#{repo}.git"}
 ruby "2.7.0"
 
 gem "active_storage_validations", "0.8.2"
+gem "active_model_serializers", "~> 0.10.12"
 gem "bcrypt"
 gem "bootsnap", ">= 1.4.4", require: false
 gem "bootstrap-kaminari-views"
@@ -33,10 +34,13 @@ gem "ransack"
 gem "sass-rails", ">= 6"
 gem "simplecov"
 gem "simplecov-rcov"
+gem "simple_token_authentication"
 gem "sqlite3", "~> 1.4"
 gem "turbolinks", "~> 5"
 gem "webpacker", "~> 5.0"
 gem "whenever"
+gem "jwt"
+gem "rack-cors"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]

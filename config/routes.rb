@@ -34,6 +34,16 @@ Rails.application.routes.draw do
 
     devise_for :users, skip: :omniauth_callbacks
 
+    namespace :api do
+      namespace :v1 do
+        devise_scope :user do
+          post "sign_up", to: "registrations#create"
+          post "sign_in", to: "sessions#create"
+          delete "sign_out", to: "sessions#destroy"
+        end
+      end
+    end
+
     as :user do
       get "signup", to: "devise/registrations#new"
       get "login", to: "devise/sessions#new"

@@ -21,5 +21,6 @@ module DnOe50bEmc
     config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
     config.i18n.available_locales = [:en, :vi]
     config.i18n.default_locale = :vi
+    config.autoload_paths << "lib"
   end
 end

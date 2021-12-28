@@ -2,8 +2,7 @@
   <div class="container-fluid">
     <ul class="nav navbar-nav navbar-right">
       <li>
-        <a href="#"><i class="zmdi zmdi-notifications text-danger"></i>
-        </a>
+        <%= render "notificationads/notification_center" %>
       </li>
       <li><%= link_to_unless_current t("language.en"), locale: :en %></li>
       <li><%= link_to_unless_current t("language.vi"), locale: :vi %></li>

@@ -260,3 +260,4 @@ vi:
     name_receiver: "Tên người nhận: %{name_receiver}"
     phone_number: "Số điện thoại: %{phone_number}"
     address: "Địa chỉ: %{address}"
+  notification: "Thông báo"

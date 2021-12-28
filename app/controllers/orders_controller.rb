@@ -15,6 +15,8 @@ class OrdersController < ApplicationController
       create_order_details
       @order.assign_attributes(order_params)
       @order.save!
+      Notificationad.create(event: "#{@order.user_name} đã đặt đơn hàng mới",
+                            order_id: @order.id)
       send_mail_new_order
       flash[:success] = t "order.order_success"
       session[:cart] = nil

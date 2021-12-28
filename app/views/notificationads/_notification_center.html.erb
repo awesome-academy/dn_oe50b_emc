@@ -1,0 +1,24 @@
+<%= javascript_pack_tag "notification.js" %>
+<ul class="notificator">
+  <a href="#" id="open_notification">
+    <% if count_notifi.present? %>
+      <%= render "notificationads/counter", counter: count_notifi %>
+    <% else %>
+      <%= render "notificationads/counter", counter: 0 %>
+    <% end %>
+  </a>
+
+  <div id="notificationContainer">
+    <div id="notificationTitle">
+      <%= t "notification" %>
+    </div>
+    <div id="notificationsBody" class="notifications">
+      <ul id="notificationList">
+        <%= render "notificationads/notification" %>
+      </ul>
+    </div>
+    <div id="notificationFooter"></div>
+  </div>
+</ul>
+
+

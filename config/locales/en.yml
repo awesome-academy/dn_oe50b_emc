@@ -195,6 +195,7 @@ en:
                         know detail"
       content_reject: "Sorry, for some reasons your order is rejected, please
                         check your email to know detail"
+      statistic_order: "At the end of month, let's statistic order!"
     statistic:
       month: "Statistic orders by month"
       year: "Statistic orders by year"

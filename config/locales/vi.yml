@@ -194,6 +194,7 @@ vi:
        hãy kiểm tra email để biết thêm thông tin chi tiết đơn hàng"
       content_reject: "Rất tiếc, vì một vài lí do mà đơn hàng của bạn không
         thể thực hiện thành công, hãy kiểm tra email để biết thêm thông tin"
+      statistic_order: "Cuối tháng rồi, xin hãy thống kê hóa đơn hệ thống!"
     statistic:
       month: "Thống kê hóa đơn theo tháng"
       year: "Thống kê hóa đơn theo năm"

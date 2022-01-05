@@ -49,7 +49,12 @@ Rails.application.routes.draw do
       end
     end
     resources :notifications, only: [:show]
-    resources :static_pages, only: [:index, :show]
+    resources :static_pages, only: [:index, :show] do
+      member do
+        get :filter_by_category
+        get :filter_by_status
+      end
+    end
     resources :account_activations, only: :edit
     resources :password_resets, except: %i(index show destroy)
     resources :orders, only: [:new, :create, :index] do

@@ -21,4 +21,10 @@ class Order < ApplicationRecord
       item.product.update!(quantity: item.product.quantity + item.quantity)
     end
   end
+
+  def recovery_quantity
+    order_details.each do |item|
+      item.product.update!(quantity: item.product.quantity - item.quantity)
+    end
+  end
 end

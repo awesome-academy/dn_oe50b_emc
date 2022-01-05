@@ -6,48 +6,20 @@
         <%= t "home.category" %>
       </a>
       <ul class="list-group">
-        <li class="list-group-item">Truyện tranh
-          <span class="label label-primary pull-right">234</span>
-        </li>
-        <li class="list-group-item">Trinh thám
-          <span class="label label-success pull-right">34</span>
-        </li>
-      </ul>
-    </div>
-    <div>
-      <a href="#" class="list-group-item active list-group-item-success">
-        <%= t "home.author" %>
-      </a>
-      <ul class="list-group">
-        <li class="list-group-item">Tác giả 1
-          <span class="label label-danger pull-right">300</span>
-        </li>
-        <li class="list-group-item">Tác giả 2
-          <span class="label label-success pull-right">340</span>
-        </li>
-      </ul>
-    </div>
-    <div>
-      <a href="#" class="list-group-item active">
-        <%= t "home.publisher" %>
-      </a>
-      <ul class="list-group">
-        <li class="list-group-item">Nhà xuất bản 1
-          <span class="label label-warning pull-right">456</span>
-        </li>
-        <li class="list-group-item">Nhà xuất bản 2
-          <span class="label label-success pull-right">156</span>
-        </li>
-        <li class="list-group-item">Nhà xuất bản 3
-          <span class="label label-info pull-right">400</span>
-        </li>
+        <%= render partial: "category", collection: @categories %>
       </ul>
     </div>
     <div>
       <ul class="list-group">
-        <li class="list-group-item list-group-item-success"><a href="#">Sản phẩm mới</a></li>
-        <li class="list-group-item list-group-item-info"><a href="#">Sản phẩm Hot</a></li>
-        <li class="list-group-item list-group-item-warning"><a href="#">Sản phẩm sắp ra mắt</a></li>
+        <li class="list-group-item list-group-item-success">
+          <%= link_to t("product.new"), filter_by_status_static_page_path(1), method: :get %>
+        </li>
+        <li class="list-group-item list-group-item-info">
+          <%= link_to t("product.hot"), filter_by_status_static_page_path(0), method: :get %>
+        </li>
+        <li class="list-group-item list-group-item-warning">
+          <%= link_to t("product.trend"), filter_by_status_static_page_path(2), method: :get %>
+        </li>
       </ul>
     </div>
   </div>

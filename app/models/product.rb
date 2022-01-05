@@ -19,6 +19,9 @@ class Product < ApplicationRecord
                     size: {less_than: 5.megabytes, message: I18n.t("image.min")}
   scope :ordered_by_price, ->{order(price: :asc)}
   scope :sort_by_created, ->{order(created_at: :desc)}
+  scope :total_categori, ->(id){where(category_id: id).size}
+  scope :by_categori, ->(id){where(category_id: id) if id.present?}
+  scope :by_status, ->(id){where(status: id) if id.present?}
 
   def check_enought_quantity? quantity_params
     quantity_params.positive? && quantity >= quantity_params

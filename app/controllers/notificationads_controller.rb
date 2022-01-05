@@ -8,7 +8,11 @@ class NotificationadsController < ApplicationController
   def update_to_read
     ActiveRecord::Base.transaction do
       @notification.update(read_at: Time.zone.now)
-      redirect_to admin_order_path(@notification.order_id)
+      if @notification.order_id.nil?
+        redirect_to admin_orders_path
+      else
+        redirect_to admin_order_path(@notification.order_id)
+      end
     rescue ActiveRecord::RecordInvalid
       redirect_to admin_products_path
     end

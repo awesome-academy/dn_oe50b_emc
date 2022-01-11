@@ -90,7 +90,6 @@ class OrdersController < ApplicationController
   end
 
   def send_mail_new_order
-    OrderMailer.new_orders(@order, @order.order_details.includes(:product),
-                           @order.total_money).deliver_now
+    SendEmailJob.set(wait: Settings.wait_time.minute).perform_later @order
   end
 end

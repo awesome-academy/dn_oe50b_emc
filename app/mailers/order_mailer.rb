@@ -6,10 +6,9 @@ class OrderMailer < ApplicationMailer
     mail to: @order.user_email, subject: t("order_mailer.title")
   end
 
-  def new_orders order, order_detail, total
+  def new_orders order
     @order = order
-    @order_detail = order_detail
-    @total = total
+    @order_detail = @order.order_details.includes(:product)
     mail to: @order.user_email, subject: t("order_mailer.title")
   end
 end

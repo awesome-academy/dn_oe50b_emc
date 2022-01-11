@@ -22,5 +22,6 @@ module DnOe50bEmc
     config.i18n.available_locales = [:en, :vi]
     config.i18n.default_locale = :vi
     config.autoload_paths << "lib"
+    config.active_job.queue_adapter = :sidekiq
   end
 end

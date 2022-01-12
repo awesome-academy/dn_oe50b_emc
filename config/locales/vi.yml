@@ -266,3 +266,9 @@ vi:
     phone_number: "Số điện thoại: %{phone_number}"
     address: "Địa chỉ: %{address}"
   notification: "Thông báo"
+  social_share_button:
+    share_to: "Chia sẻ với %{name}"
+    email: "Email"
+    facebook: "Facebook"
+    twitter: "Twitter"
+    google_bookmark: "Google Bookmark"

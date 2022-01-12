@@ -72,8 +72,8 @@ ActiveRecord::Schema.define(version: 2022_01_11_140918) do
     t.integer "actor_id"
     t.datetime "read_at"
     t.string "noti_type"
-    t.datetime "created_at", precision: 6
-    t.datetime "updated_at", precision: 6
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.string "title"
     t.string "content"
   end
@@ -83,8 +83,8 @@ ActiveRecord::Schema.define(version: 2022_01_11_140918) do
     t.integer "quantity"
     t.bigint "order_id", null: false
     t.bigint "product_id", null: false
-    t.datetime "created_at", precision: 6
-    t.datetime "updated_at", precision: 6
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.datetime "deleted_at"
     t.index ["deleted_at"], name: "index_order_details_on_deleted_at"
     t.index ["order_id"], name: "index_order_details_on_orders_id"
@@ -137,9 +137,9 @@ ActiveRecord::Schema.define(version: 2022_01_11_140918) do
     t.string "title"
     t.text "content"
     t.boolean "status"
-    t.bigint "user_id"
-    t.datetime "created_at", precision: 6
-    t.datetime "updated_at", precision: 6
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_suggests_on_user_id"
   end
 

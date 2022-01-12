@@ -1,4 +1,6 @@
 class Order < ApplicationRecord
+  extend FriendlyId
+  friendly_id :name_customer, use: %i(slugged finders)
   belongs_to :user
   has_many :order_details, dependent: :destroy
   scope :ordered_by_price, ->{order(:total_money)}
@@ -15,6 +17,10 @@ class Order < ApplicationRecord
             format: {with: Settings.regex.PHONE_NUMBER_REGEX}
   delegate :email, :name, to: :user, prefix: true
   enum status: {pending: 0, approve: 1, not_accept: 2, cancel: 3}
+
+  def should_generate_new_friendly_id?
+    name_customer_changed? || super
+  end
 
   def rollback_quantity
     order_details.each do |item|

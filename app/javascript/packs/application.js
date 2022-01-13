@@ -8,7 +8,7 @@ require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 require("jquery")
-require('chartkick')
+require("chartkick")
 import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
@@ -16,6 +16,9 @@ import "channels"
 import "@fortawesome/fontawesome-free/css/all"
 import "bootstrap"
 import "chartkick/chart.js"
+
+//= require social-share-button
+
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()

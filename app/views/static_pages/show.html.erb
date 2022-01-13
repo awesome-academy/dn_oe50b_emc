@@ -29,4 +29,13 @@
     <%= link_to t("home.add_to_cart"), add_to_carts_path(@products, quantity: 1), method: :post,
     class: "btn-product btn-success" %>
   </p>
+   <div class="col-sm-6 aside">
+      <div class="widget">
+        <div class="widget-body">
+          <div class="beta-sales beta-lists">
+           <%= social_share_button_tag(@products.name) %>
+          </div>
+        </div>
+      </div>
+    </div>
 </div>

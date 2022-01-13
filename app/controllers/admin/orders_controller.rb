@@ -22,7 +22,7 @@ class Admin::OrdersController < Admin::BaseController
   rescue ActiveRecord::RecordInvalid
     flash[:danger] = t "flash.update_order_fail"
   else
-    flash[:success] = t "flash.update_order_succ"
+    flash[:success] = t "flash.update_order_succc"
   ensure
     redirect_to action: :index
   end

@@ -41,6 +41,7 @@ gem "jwt"
 gem "rack-cors"
 gem "sidekiq"
 gem "friendly_id", "~> 5.4.0"
+gem "social-share-button"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]

@@ -20,7 +20,7 @@ class Admin::OrdersController < Admin::BaseController
       send_mail_change_status
     end
   rescue ActiveRecord::RecordInvalid
-    flash[:danger] = t "flash.update_order_fail"
+    flash[:danger] = t "flash.update_order_faill"
   else
     flash[:success] = t "flash.update_order_succ"
   ensure
